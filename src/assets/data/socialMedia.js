@@ -1,6 +1,6 @@
-import GitHubIcon from '../images/icon-gh.svg';
-import FacebookIcon from '../images/icon-fb.svg';
-import InstagramIcon from '../images/icon-ig.svg';
+import GitHubIcon from '../images/icon-gh.inline.svg';
+import FacebookIcon from '../images/icon-fb.inline.svg';
+import InstagramIcon from '../images/icon-ig.inline.svg';
 
 export default [
     {
