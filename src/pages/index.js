@@ -1,28 +1,18 @@
 import React from 'react';
 import { useIntl } from 'gatsby-plugin-intl';
-import styled from 'styled-components';
-import Layout from '../components/layout';
-import Image from '../components/image';
-import SEO from '../components/SEO';
+import SEO from '../components/SEO/SEO';
+import App from '../App';
+import Footer from '../components/molecules/Footer/Footer';
 
-const H1 = styled.h1`
-    color: red;
-    text-align: center;
-`;
-
-const IndexPage = () => {
+const Index = () => {
     const intl = useIntl();
 
     return (
-        <Layout>
-            <SEO description={intl.formatMessage({ id: 'title' })} />
-            <H1>{intl.formatMessage({ id: 'title' })}</H1>
-            <p>Now go build something great.</p>
-            <div>
-                <Image />
-            </div>
-        </Layout>
+        <App>
+            <SEO description={intl.formatMessage({ id: 'seo.description' })} />
+            <Footer />
+        </App>
     );
 };
 
-export default IndexPage;
+export default Index;
