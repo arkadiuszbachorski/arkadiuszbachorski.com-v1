@@ -44,6 +44,15 @@ const GlobalStyle = createGlobalStyle`
   *, *::after, *::before {
     box-sizing: border-box;
   }
+  
+  .svg-inline--fa {
+    color: ${(props) => props.theme.colors.font};
+    height: 2rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+  }
 `;
 
 const App = ({ children }) => {
