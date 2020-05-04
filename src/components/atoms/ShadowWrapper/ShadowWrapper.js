@@ -18,6 +18,11 @@ const ShadowWrapper = styled.div`
         left: ${(props) => props.shadowOffset?.left ?? 0}px;
     }
 
+    &.darker::after {
+        background-color: ${(props) => props.theme.colors.primaryDarker};
+        border-color: ${(props) => props.theme.colors.primaryDarker};
+    }
+
     &.can-hover {
         &::after {
             transition: transform 0.25s;

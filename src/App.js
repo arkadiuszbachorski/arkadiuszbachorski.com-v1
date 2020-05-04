@@ -9,7 +9,10 @@ const theme = {
         font: '#000000',
         background: '#FFFFFF',
         primary: '#F07178',
+        primaryDarker: '#C35C61',
         secondary: '#3F3D56',
+        muted: '#0000007F',
+        accent: '#F2F2F2',
     },
     font: {
         family: {
@@ -27,9 +30,9 @@ const theme = {
         },
     },
     mediaQuery: {
-        tablet: `@media (min-width: 768px)`,
-        desktop: `@media (min-width: 1024px)`,
-        large: `@media (min-width: 1440px)`,
+        tablet: `min-width: 768px`,
+        desktop: `min-width: 1024px`,
+        large: `min-width: 1440px`,
     },
 };
 

@@ -25,9 +25,7 @@ const SocialMediaIcon = ({ url, children, name, withShadow }) => {
     return (
         <a href={url} title={name} aria-label={name}>
             {withShadow ? (
-                <ShadowIconWrapper className="can-hover" shadowOffset={{ top: 5, left: 5 }}>
-                    {children}
-                </ShadowIconWrapper>
+                <ShadowIconWrapper shadowOffset={{ top: 5, left: 5 }}>{children}</ShadowIconWrapper>
             ) : (
                 <IconWrapper>{children}</IconWrapper>
             )}
