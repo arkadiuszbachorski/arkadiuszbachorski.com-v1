@@ -11,9 +11,13 @@
     "technologies.text": "Technologie, w których się poruszam pozwalają mi definiować siebie jako Fullstack Web Developera. Skupiam się przede wszystkim na jakości kodu oraz doświadczeniach użytkownika. Po stronie klienta najchętniej wykorzystuję React, w towarzystwie styled-components, Reduxa oraz testów Jest.  Po stronie serwera narazie stawiam na Laravel oraz MySQL, choć planuję wkrótce rozszerzyć zestaw narzędzi backendowych o Express. Nie boję się prostych designów, lecz nie wykraczam poza własne potrzeby.",
     "technologies.button": "Zobacz pełną listę",
     "projects.title": "Projekty",
+    "projects.button.visit": "Zobacz",
+    "projects.button.repository": "Repozytorium",
     "contact.title": "Kontakt",
     "contact.text": "Jeśli masz ciekawy pomysł, chciałbyś podjąć współpracę, zadać mi jakieś pytanie lub po prostu porozmawiać - jestem do Twojej dyspozycji!",
     "contact.form.email": "Twój adres email",
     "contact.form.message": "W czym mogę pomóc?",
-    "contact.form.button": "Wyślij"
+    "contact.form.button": "Wyślij",
+    "projects.zhonya.description": "Aplikacja zapewniająca użytkownikowi możliwość łatwego mierzenia czasu, który poświęca na wybraną czynność. Usprawnia skrupulatne zarządzanie czasem.",
+    "projects.xmake.description": "Komenda Laravel Artisan xmake przyspieszająca proces tworzenia aplikacji poprzez generowanie podobnych zasobów z poziomu CLI."
 }

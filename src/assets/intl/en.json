@@ -11,9 +11,13 @@
     "technologies.text": "If I had to define myself, I would say I am a Fullstack Web Developer. My main focus is on code quality and user experience. On the front-end I prefer to use React with styled-components, Redux and Jest tests. On the server side, so far I bet on Laravel and MySQL, but I plan to learn Express. I am not afraid of simple design, but I don't go beyond my own needs.",
     "technologies.button": "See complete list of technologies",
     "projects.title": "Projects",
+    "projects.button.visit": "Visit",
+    "projects.button.repository": "Repository",
     "contact.title": "Contact",
     "contact.text": "If you have some interesting idea, would like to cooperate, ask me a question or just talk - don't hesitate to ask me!",
     "contact.form.email": "Your e-mail address",
     "contact.form.message": "How can I help you?",
-    "contact.form.button": "Send"
+    "contact.form.button": "Send",
+    "projects.zhonya.description": "Zhonya is an application that allows users to easily measure time which they spend on specific activity to improve their time management possibilities.",
+    "projects.xmake.description": "Additional Laravel Artisan xmake command for faster resource creating and scaffolding. Created to speed up developing process."
 }
