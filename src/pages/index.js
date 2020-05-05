@@ -6,6 +6,7 @@ import Footer from '../components/molecules/Footer/Footer';
 import Projects from '../components/molecules/Projects/Projects';
 import Contact from '../components/molecules/Contact/Contact';
 import Technologies from '../components/molecules/Technologies/Technologies';
+import AboutMe from '../components/molecules/AboutMe/AboutMe';
 
 const Index = () => {
     const intl = useIntl();
@@ -13,6 +14,7 @@ const Index = () => {
     return (
         <App>
             <SEO description={intl.formatMessage({ id: 'seo.description' })} />
+            <AboutMe />
             <Technologies />
             <Projects />
             <Contact />
