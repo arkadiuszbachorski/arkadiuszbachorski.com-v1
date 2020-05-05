@@ -12,7 +12,8 @@ const MainWrapper = styled(SectionWrapper)`
     display: flex;
     max-width: 1100px;
     width: 100%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1rem;
 `;
 
@@ -25,6 +26,10 @@ const ProjectWrapper = styled.article`
 
     @media (${(props) => props.theme.mediaQuery.desktop}) {
         flex-direction: row;
+    }
+
+    &:first-of-type {
+        margin-top: 0;
     }
 
     &:not(:last-child) {

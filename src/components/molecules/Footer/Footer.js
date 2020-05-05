@@ -8,7 +8,7 @@ const FooterContainer = styled.footer`
     width: 100%;
     align-items: center;
     flex-direction: column;
-    margin: 4rem 0 2rem;
+    margin: 8rem 0 2rem;
 `;
 
 const IconsContainer = styled.div`
