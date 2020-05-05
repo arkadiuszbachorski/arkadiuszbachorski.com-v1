@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import ShadowWrapper from '../ShadowWrapper/ShadowWrapper';
+import AnimatedShadowWrapper from '../ShadowWrapper/AnimatedShadowWrapper';
 
 const iconWrapperRules = `
     width: 3.5rem;
@@ -11,9 +11,7 @@ const iconWrapperRules = `
     align-items: center;
 `;
 
-const ShadowIconWrapper = styled(ShadowWrapper).attrs(() => ({
-    className: 'can-hover',
-}))`
+const ShadowIconWrapper = styled(AnimatedShadowWrapper)`
     ${iconWrapperRules}
 `;
 

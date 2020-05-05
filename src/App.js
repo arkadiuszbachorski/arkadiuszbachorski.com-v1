@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.colors.font};
     background-color: ${(props) => props.theme.colors.background};
   }
-  
+
   *, *::after, *::before {
     box-sizing: border-box;
   }

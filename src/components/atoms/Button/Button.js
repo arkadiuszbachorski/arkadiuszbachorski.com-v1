@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import ShadowWrapper from '../ShadowWrapper/ShadowWrapper';
+import AnimatedShadowWrapper from '../ShadowWrapper/AnimatedShadowWrapper';
 
-const Btn = styled(ShadowWrapper)`
+const Btn = styled(AnimatedShadowWrapper)`
     background-color: ${(props) => props.theme.colors.primary};
     color: ${(props) => props.theme.colors.font};
     border: none;
@@ -21,7 +21,7 @@ const Button = ({ children, onClick, href, target }) => {
     return (
         <Btn
             shadowOffset={{ top: -5, left: -5 }}
-            className="can-hover darker"
+            className="darker"
             href={href}
             as={as}
             onClick={onClick}

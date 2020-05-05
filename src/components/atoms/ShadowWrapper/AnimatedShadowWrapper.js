@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ShadowWrapper = styled.div`
+const AnimatedShadowWrapper = styled.div`
     box-shadow: inset 0 0 0 2px ${(props) => props.theme.colors.font};
     background-color: ${(props) => props.theme.colors.background};
     position: relative;
@@ -16,25 +16,20 @@ const ShadowWrapper = styled.div`
         background-color: ${(props) => props.theme.colors.primary};
         top: ${(props) => props.shadowOffset?.top ?? 0}px;
         left: ${(props) => props.shadowOffset?.left ?? 0}px;
+        transition: transform 0.25s;
+    }
+
+    &:hover::after {
+        transform: translate(
+            ${(props) => props.shadowOffset?.left * -2 ?? 0}px,
+            ${(props) => props.shadowOffset?.top * -2 ?? 0}px
+        );
     }
 
     &.darker::after {
         background-color: ${(props) => props.theme.colors.primaryDarker};
         border-color: ${(props) => props.theme.colors.primaryDarker};
     }
-
-    &.can-hover {
-        &::after {
-            transition: transform 0.25s;
-        }
-
-        &:hover::after {
-            transform: translate(
-                ${(props) => props.shadowOffset?.left * -2 ?? 0}px,
-                ${(props) => props.shadowOffset?.top * -2 ?? 0}px
-            );
-        }
-    }
 `;
 
-export default ShadowWrapper;
+export default AnimatedShadowWrapper;

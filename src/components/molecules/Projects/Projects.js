@@ -61,19 +61,7 @@ const Image = styled(Img)`
     width: 100%;
     position: relative;
     overflow: visible !important;
-
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        border: 2px solid ${(props) => props.theme.colors.primary};
-        background-color: ${(props) => props.theme.colors.primary};
-        top: 5px;
-        left: 5px;
-    }
+    box-shadow: 5px 5px 0 ${(props) => props.theme.colors.primary};
 
     @media (${(props) => props.theme.mediaQuery.tablet}) {
         position: absolute !important;
@@ -82,10 +70,7 @@ const Image = styled(Img)`
         top: 17px;
         left: 38px;
         overflow: hidden !important;
-
-        &::after {
-            content: none;
-        }
+        box-shadow: none;
     }
 `;
 
