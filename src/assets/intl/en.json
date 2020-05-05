@@ -15,8 +15,11 @@
     "projects.button.repository": "Repository",
     "contact.title": "Contact",
     "contact.text": "If you have some interesting idea, would like to cooperate, ask me a question or just talk - don't hesitate to ask me!",
-    "contact.form.email": "Your e-mail address",
-    "contact.form.message": "How can I help you?",
+    "contact.form.placeholder.email": "Your e-mail address",
+    "contact.form.placeholder.message": "How can I help you?",
+    "contact.form.validation.email.required": "E-mail address is required",
+    "contact.form.validation.email.invalid": "Invalid e-mail address",
+    "contact.form.validation.message.required": "Message is required",
     "contact.form.button": "Send",
     "projects.zhonya.description": "Zhonya is an application that allows users to easily measure time which they spend on specific activity to improve their time management possibilities.",
     "projects.xmake.description": "Additional Laravel Artisan xmake command for faster resource creating and scaffolding. Created to speed up developing process."
