@@ -13,13 +13,24 @@ const Btn = styled(AnimatedShadowWrapper)`
     cursor: pointer;
     text-decoration: none;
     margin-left: 5px;
+
+    &:disabled {
+        cursor: default;
+        background-color: ${(props) => props.theme.colors.accent};
+
+        &::after {
+            opacity: 0.4;
+        }
+    }
 `;
 
-const Button = ({ children, onClick, href, target }) => {
+const Button = ({ children, onClick, href, target, type, disabled }) => {
     const as = href ? 'a' : 'button';
 
     return (
         <Btn
+            type={type}
+            disabled={disabled}
             shadowOffset={{ top: -5, left: -5 }}
             className="darker"
             href={href}
@@ -37,6 +48,7 @@ Button.propTypes = {
     onClick: PropTypes.func,
     href: PropTypes.string,
     target: PropTypes.oneOf(['_blank']),
+    type: PropTypes.oneOf(['submit', 'button', 'reset']),
+    disabled: PropTypes.bool,
 };
-
 export default Button;
