@@ -68,7 +68,7 @@ const ErrorMessage = styled(FormikErrorMessage)`
 const Contact = () => {
     const intl = useIntl();
     return (
-        <MainWrapper>
+        <MainWrapper id="contact">
             <SectionTitle>
                 <FormattedMessage id="contact.title" />
             </SectionTitle>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'gatsby-plugin-intl';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Logo from '../../../../assets/images/logo.inline.svg';
 import socialMedia from '../../../../assets/data/socialMedia';
 import SocialMediaIcon from '../../../atoms/SocialIcon/SocialMediaIcon';
@@ -60,7 +61,7 @@ const MenuWrapper = styled.nav`
     }
 `;
 
-const MenuItem = styled.a`
+const MenuItem = styled(AnchorLink)`
     margin: 2rem;
     font-size: ${(props) => props.theme.font.size.l};
     color: ${(props) => props.theme.colors.font};
@@ -172,7 +173,7 @@ const Header = () => {
             </LogoWrapper>
             <MenuWrapper isOpen={isOpen}>
                 {['aboutMe', 'technologies', 'projects', 'contact'].map((section) => (
-                    <MenuItem key={section} href={`#${section}`}>
+                    <MenuItem key={section} href={`#${section}`} onClick={closeMenu}>
                         <FormattedMessage id={`${section}.title`} />
                     </MenuItem>
                 ))}

@@ -107,7 +107,7 @@ const AboutMe = () => {
     `);
 
     return (
-        <MainWrapper>
+        <MainWrapper id="aboutMe">
             <SectionTitle>
                 <FormattedMessage id="aboutMe.title" />
             </SectionTitle>

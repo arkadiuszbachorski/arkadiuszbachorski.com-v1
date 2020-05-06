@@ -70,7 +70,7 @@ const ButtonWrapper = styled.div`
 const Technologies = () => {
     const [modalOpen, setModalOpen] = useState(false);
     return (
-        <MainWrapper>
+        <MainWrapper id="technologies">
             <SectionTitle>
                 <FormattedMessage id="technologies.title" />
             </SectionTitle>

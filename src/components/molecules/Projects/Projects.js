@@ -132,7 +132,7 @@ const ButtonWrapper = styled.nav`
 const Projects = () => {
     const projects = useProjectsData();
     return (
-        <MainWrapper>
+        <MainWrapper id="projects">
             <SectionTitle>
                 <FormattedMessage id="projects.title" />
             </SectionTitle>
