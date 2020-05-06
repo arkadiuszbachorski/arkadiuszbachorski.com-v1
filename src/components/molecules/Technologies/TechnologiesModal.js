@@ -12,7 +12,7 @@ const TechnologiesWrapper = styled.div`
 `;
 
 const TechnologyGroupWrapper = styled.section`
-    width: 300px;
+    width: 230px;
     margin: 1rem;
 `;
 
@@ -44,7 +44,7 @@ const TechnologiesModal = ({ modalOpen, setModalOpen }) => {
         <Modal isOpen={modalOpen} setOpen={setModalOpen}>
             <TechnologiesWrapper>
                 {Object.entries(technologies).map(([key, list]) => (
-                    <TechnologyGroupWrapper>
+                    <TechnologyGroupWrapper key={key}>
                         <TechnologyGroupTitle>
                             <FormattedMessage id={`technologies.group.${key}`} />
                         </TechnologyGroupTitle>
