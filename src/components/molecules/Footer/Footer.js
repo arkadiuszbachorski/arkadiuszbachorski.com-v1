@@ -9,6 +9,10 @@ const FooterContainer = styled.footer`
     align-items: center;
     flex-direction: column;
     margin: 8rem 0 2rem;
+
+    @media (${(props) => props.theme.mediaQuery.tablet}) {
+        margin-top: 14rem;
+    }
 `;
 
 const IconsContainer = styled.div`

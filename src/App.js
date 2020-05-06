@@ -12,7 +12,7 @@ const theme = {
         primaryDarker: '#C35C61',
         secondary: '#3F3D56',
         muted: '#0000007F',
-        accent: '#F2F2F2',
+        accent: '#e7e7e7',
     },
     font: {
         family: {

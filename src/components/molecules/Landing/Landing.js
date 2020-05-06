@@ -10,6 +10,7 @@ const MainWrapper = styled.div`
     position: relative;
     height: 100vh;
     min-height: 500px;
+    margin-bottom: 4rem;
 
     color: ${(props) => props.theme.colors.background};
 
