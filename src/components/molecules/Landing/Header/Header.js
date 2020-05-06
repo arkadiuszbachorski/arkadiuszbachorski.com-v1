@@ -7,8 +7,7 @@ import SocialMediaIcon from '../../../atoms/SocialIcon/SocialMediaIcon';
 import CloseButton from '../../../atoms/CloseButton/CloseButton';
 import HamburgerIcon from '../../../../assets/images/icons/hamburger.inline.svg';
 import animationsDelay, { uiAnimation } from '../../../../animationsDelay';
-
-const sections = ['aboutMe', 'technologies', 'projects', 'contact'];
+import useKeyboardKey from '../../../../hooks/useKeyboardKey';
 
 const LogoWrapper = styled.div`
     max-width: 60vw;
@@ -158,20 +157,28 @@ const StyledCloseButton = styled(CloseButton)`
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+
+    const closeMenu = () => setIsOpen(false);
+    const openMenu = () => setIsOpen(true);
+
+    useKeyboardKey('Escape', () => {
+        closeMenu();
+    });
+
     return (
         <Wrapper>
             <LogoWrapper>
                 <Logo />
             </LogoWrapper>
             <MenuWrapper isOpen={isOpen}>
-                {sections.map((section) => (
+                {['aboutMe', 'technologies', 'projects', 'contact'].map((section) => (
                     <MenuItem key={section} href={`#${section}`}>
                         <FormattedMessage id={`${section}.title`} />
                     </MenuItem>
                 ))}
-                <StyledCloseButton onClick={() => setIsOpen(false)} />
+                <StyledCloseButton onClick={closeMenu} />
             </MenuWrapper>
-            <MenuOverlay isOpen={isOpen} onClick={() => setIsOpen(false)} />
+            <MenuOverlay isOpen={isOpen} onClick={closeMenu} />
             <SocialMediaIconsWrapper>
                 {socialMedia.map(({ name, url, icon: Icon }) => (
                     <SocialMediaIcon key={name} name={name} url={url}>
@@ -179,7 +186,7 @@ const Header = () => {
                     </SocialMediaIcon>
                 ))}
             </SocialMediaIconsWrapper>
-            <MenuButton onClick={() => setIsOpen(true)}>
+            <MenuButton onClick={openMenu}>
                 <HamburgerIcon />
             </MenuButton>
         </Wrapper>

@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import CloseButton from '../CloseButton/CloseButton';
+import useKeyboardKey from '../../../hooks/useKeyboardKey';
 
 const Wrapper = styled.div`
     position: fixed;
@@ -50,18 +51,7 @@ const classIdentifier = 'modal-closing-background';
 
 const Modal = ({ isOpen, setOpen, children }) => {
     const closeModal = () => setOpen(false);
-    useEffect(() => {
-        const handle = (e) => {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        };
-        document.addEventListener('keyup', handle);
-
-        return () => {
-            document.removeEventListener('keyup', handle);
-        };
-    });
+    useKeyboardKey('Escape', closeModal);
 
     return (
         <Wrapper isOpen={isOpen}>
