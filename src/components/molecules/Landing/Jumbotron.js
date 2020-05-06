@@ -34,24 +34,18 @@ const Hi = styled(JumbotronTexts)`
     font-size: 1.2rem;
     display: block;
 
-    br.first-brake {
-        display: none;
-    }
-
     span {
         color: ${(props) => props.theme.colors.primary};
     }
 
-    @media (min-width: 600px) {
-        font-size: 4vw;
-
-        br.first-brake {
-            display: initial;
-        }
-
-        br.second-brake {
+    @media (min-width: 355px) {
+        br {
             display: none;
         }
+    }
+
+    @media (min-width: 600px) {
+        font-size: 4vw;
     }
 
     @media (${(props) => props.theme.mediaQuery.desktop}) {
@@ -111,7 +105,7 @@ const Jumbotron = () => {
     return (
         <Wrapper>
             <Hi>
-                <FormattedMessage id="jumbotron.presentation" />
+                <FormattedMessage id="jumbotron.presentation" /> <br />
                 <span>Arkadiusz Bachorski</span>
             </Hi>
             <Passion className={typewriter.isTyping ? 'is-typing' : ''}>{typewriter.content}</Passion>
