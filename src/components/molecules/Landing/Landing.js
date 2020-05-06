@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Jumbotron from './Jumbotron';
+import Jumbotron from './Jumbotron/Jumbotron';
 import Header from './Header/Header';
 import landingBackground from '../../../assets/images/landing-background.jpg';
-import Hi from './Hi';
+import Hi from './Hi/Hi';
 
 const MainWrapper = styled.div`
     padding: 1rem;

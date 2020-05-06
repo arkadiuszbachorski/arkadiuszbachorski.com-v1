@@ -1,15 +1,15 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { FormattedMessage } from 'gatsby-plugin-intl';
-import animationsDelay from '../../../animationsDelay';
+import animationsDelay from '../../../../animationsDelay';
 
 const wrapperAnimation = keyframes`
-from {
-  opacity: 1;
-}
-to {
-  opacity: 0;
-}
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
 `;
 
 const Wrapper = styled.div`
