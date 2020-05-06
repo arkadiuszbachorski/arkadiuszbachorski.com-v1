@@ -24,7 +24,7 @@ const Btn = styled(AnimatedShadowWrapper)`
     }
 `;
 
-const Button = ({ children, onClick, href, target, type, disabled }) => {
+const Button = ({ children, className, onClick, href, target, type, disabled }) => {
     const as = href ? 'a' : 'button';
 
     return (
@@ -32,7 +32,7 @@ const Button = ({ children, onClick, href, target, type, disabled }) => {
             type={type}
             disabled={disabled}
             shadowOffset={{ top: -5, left: -5 }}
-            className="darker"
+            className={`darker ${className ?? ''}`}
             href={href}
             as={as}
             onClick={onClick}
@@ -45,6 +45,7 @@ const Button = ({ children, onClick, href, target, type, disabled }) => {
 
 Button.propTypes = {
     children: PropTypes.node.isRequired,
+    className: PropTypes.string,
     onClick: PropTypes.func,
     href: PropTypes.string,
     target: PropTypes.oneOf(['_blank']),

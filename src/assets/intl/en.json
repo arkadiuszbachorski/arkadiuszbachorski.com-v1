@@ -1,8 +1,8 @@
 {
     "seo.description": "Personal website of programmer Arkadiusz Bachorski",
-    "jumbotron.salutation": "Hi,",
-    "jumbotron.presentation": "my name is Arkadiusz!",
-    "jumbotron.passion": "I make the Internet on a daily basis",
+    "hi": "Hi!",
+    "jumbotron.presentation": "my name is",
+    "jumbotron.passion": "I am Fullstack Web Developer",
     "jumbotron.button": "Let's meet!",
     "aboutMe.title": "About me",
     "aboutMe.text1": "I've been interested in IT since I was a child. My parents say I typed my first words on keyboard instead of writing them on paper. At the end of the first class of Technical High School for Computer Science I took a serious interest in programming and I fell in love with it. Since then, I've been fulfilling my dream of being the best programmer I can.",

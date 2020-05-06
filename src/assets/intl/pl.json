@@ -1,8 +1,8 @@
 {
     "seo.description": "Strona personalna programisty webowego Arkadiusza Bachorskiego",
-    "jumbotron.salutation": "Cześć,",
-    "jumbotron.presentation": "jestem Arkadiusz!",
-    "jumbotron.passion": "Na co dzień tworzę Internet",
+    "hi": "Cześć!",
+    "jumbotron.presentation": "nazywam się ",
+    "jumbotron.passion": "jestem Fullstack Web Developerem",
     "jumbotron.button": "Poznamy się?",
     "aboutMe.title": "O mnie",
     "aboutMe.text1": "Pasja do informatyki kiełkowała we mnie od małego. Podobno swoje pierwsze słowa wystukiwałem na klawiaturze, zamiast pisać na papierze. Pod koniec pierwszej klasy technikum informatycznego poważnie zainteresowałem się programowaniem, w którym zatraciłem się bez reszty. Od tamtego czasu sukcesywnie spełniam marzenia o stawaniu się jak najlepszym developerem.",
