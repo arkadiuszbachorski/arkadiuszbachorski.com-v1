@@ -6,7 +6,7 @@ import SectionTitle from '../../atoms/SectionTitle/SectionTitle';
 import SectionWrapper from '../../atoms/SectionWrapper/SectionWrapper';
 import useProjectsData from '../../../assets/data/projects';
 import Button from '../../atoms/Button/Button';
-import ProjectFrameSVG from '../../../assets/images/project-frame.inline.svg';
+import ProjectFrameSVG from '../../../assets/images/undraw/project-frame.inline.svg';
 
 const MainWrapper = styled(SectionWrapper)`
     display: flex;

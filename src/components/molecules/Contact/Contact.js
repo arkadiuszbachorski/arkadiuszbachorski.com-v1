@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { ErrorMessage as FormikErrorMessage, Field, Formik, Form as FormikForm } from 'formik';
 import SectionTitle from '../../atoms/SectionTitle/SectionTitle';
 import SectionWrapper from '../../atoms/SectionWrapper/SectionWrapper';
-import envelopeUndraw from '../../../assets/images/envelope.svg';
+import envelopeUndraw from '../../../assets/images/undraw/envelope.svg';
 import Button from '../../atoms/Button/Button';
 
 const MainWrapper = styled(SectionWrapper)`

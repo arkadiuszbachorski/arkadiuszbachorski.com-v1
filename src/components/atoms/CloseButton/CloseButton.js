@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import CloseIcon from '../../../assets/images/close.inline.svg';
+import CloseIcon from '../../../assets/images/icons/close.inline.svg';
 
 const Close = styled.button`
     position: absolute;

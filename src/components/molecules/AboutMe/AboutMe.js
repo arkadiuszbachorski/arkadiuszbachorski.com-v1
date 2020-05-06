@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import SectionTitle from '../../atoms/SectionTitle/SectionTitle';
 import SectionWrapper from '../../atoms/SectionWrapper/SectionWrapper';
-import Profile from '../../../assets/images/profile.inline.svg';
+import Profile from '../../../assets/images/undraw/profile.inline.svg';
 
 const MainWrapper = styled(SectionWrapper)`
     max-width: 1200px;

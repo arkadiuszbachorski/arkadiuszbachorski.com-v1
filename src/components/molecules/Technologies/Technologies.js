@@ -3,7 +3,7 @@ import { FormattedMessage } from 'gatsby-plugin-intl';
 import styled from 'styled-components';
 import SectionTitle from '../../atoms/SectionTitle/SectionTitle';
 import SectionWrapper from '../../atoms/SectionWrapper/SectionWrapper';
-import reactUndraw from '../../../assets/images/react.svg';
+import reactUndraw from '../../../assets/images/undraw/react.svg';
 import Button from '../../atoms/Button/Button';
 import TechnologiesModal from './TechnologiesModal';
 

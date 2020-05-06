@@ -5,7 +5,7 @@ import Logo from '../../../../assets/images/logo.inline.svg';
 import socialMedia from '../../../../assets/data/socialMedia';
 import SocialMediaIcon from '../../../atoms/SocialIcon/SocialMediaIcon';
 import CloseButton from '../../../atoms/CloseButton/CloseButton';
-import HamburgerIcon from '../../../../assets/images/hamburger.inline.svg';
+import HamburgerIcon from '../../../../assets/images/icons/hamburger.inline.svg';
 import animationsDelay, { uiAnimation } from '../../../../animationsDelay';
 
 const sections = ['aboutMe', 'technologies', 'projects', 'contact'];
