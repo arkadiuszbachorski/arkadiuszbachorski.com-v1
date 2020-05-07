@@ -14,7 +14,6 @@ const MainWrapper = styled(SectionWrapper)`
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding: 1rem;
 `;
 
 const ProjectWrapper = styled.article`
