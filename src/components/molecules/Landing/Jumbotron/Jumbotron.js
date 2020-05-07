@@ -6,11 +6,8 @@ import animationsDelay, { buttonShadowAnimation, uiAnimation } from '../../../..
 import Passion from './Passion/Passion';
 
 const Wrapper = styled.div`
-    margin: 20vh 0 5rem;
-
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
-        margin: 30vh 0 5rem;
-    }
+    position: absolute;
+    top: 35vh;
 `;
 
 const Name = styled.span`

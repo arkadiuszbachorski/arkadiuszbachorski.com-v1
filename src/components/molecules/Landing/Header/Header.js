@@ -1,14 +1,25 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import PropTypes from 'prop-types';
 import { FormattedMessage } from 'gatsby-plugin-intl';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Logo from '../../../../assets/images/logo.inline.svg';
-import socialMedia from '../../../../assets/data/socialMedia';
-import SocialMediaIcon from '../../../atoms/SocialIcon/SocialMediaIcon';
 import CloseButton from '../../../atoms/CloseButton/CloseButton';
 import HamburgerIcon from '../../../../assets/images/icons/hamburger.inline.svg';
 import animationsDelay, { uiAnimation } from '../../../../animationsDelay';
 import useKeyboardKey from '../../../../hooks/useKeyboardKey';
+import landingBackground from '../../../../assets/images/landing-background.jpg';
+
+const headerStickingAnimation = keyframes`
+from {
+opacity: 0;
+transform: translateY(-5rem);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+`;
 
 const LogoWrapper = styled.div`
     max-width: 60vw;
@@ -26,6 +37,39 @@ const LogoWrapper = styled.div`
 const Wrapper = styled.header`
     display: flex;
     flex-wrap: wrap;
+    transition: transform 1.3s, opacity 0.3s;
+    opacity: 1;
+    align-items: center;
+
+    &.is-stuck,
+    &.is-animating {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        z-index: 300;
+        padding: 0.25rem 1rem;
+        border-bottom: 2px solid ${(props) => props.theme.colors.primary};
+        color: white;
+        background-image: url(${landingBackground});
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+
+        @media (${(props) => props.theme.mediaQuery.desktop}) {
+            padding: 1rem 2.8rem;
+        }
+    }
+
+    &.is-stuck {
+        animation: ${headerStickingAnimation} 0.3s;
+    }
+
+    &.is-animating {
+        opacity: 0;
+        transform: translateY(-5rem);
+    }
 `;
 
 const MenuWrapper = styled.nav`
@@ -37,7 +81,7 @@ const MenuWrapper = styled.nav`
     width: 280px;
     height: 100vh;
     transition: transform 0.3s;
-    transform: translateX(${(props) => (props.isOpen ? '0' : '-290px')});
+    transform: translateX(${(props) => (props.isOpen ? '0' : '-320px')});
     position: fixed;
     top: 0;
     left: 0;
@@ -78,32 +122,6 @@ const MenuItem = styled(AnchorLink)`
     }
 `;
 
-const SocialMediaIconsWrapper = styled.div`
-    display: flex;
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    animation: ${uiAnimation} 0.2s ${animationsDelay.ui}s backwards;
-    position: absolute;
-    bottom: 1rem;
-    left: 0;
-
-    > *:hover {
-        path {
-            color: ${(props) => props.theme.colors.primary};
-        }
-    }
-
-    path {
-        transition: color 0.3s;
-        color: ${(props) => props.theme.colors.background};
-    }
-
-    > * {
-        margin: 0 1rem;
-    }
-`;
-
 const MenuButton = styled.button`
     margin-left: auto;
     background-color: transparent;
@@ -111,8 +129,6 @@ const MenuButton = styled.button`
     width: 4rem;
     height: 4rem;
     padding: 0;
-    position: relative;
-    top: -1rem;
     animation: ${uiAnimation} 0.2s ${animationsDelay.ui}s backwards;
 
     svg {
@@ -156,7 +172,7 @@ const StyledCloseButton = styled(CloseButton)`
     }
 `;
 
-const Header = () => {
+const Header = ({ headerState }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const closeMenu = () => setIsOpen(false);
@@ -167,7 +183,11 @@ const Header = () => {
     });
 
     return (
-        <Wrapper>
+        <Wrapper
+            className={`${headerState.isStuck ? 'is-stuck' : 'is-top'} ${
+                headerState.isAnimating ? 'is-animating' : ''
+            }`}
+        >
             <LogoWrapper>
                 <Logo />
             </LogoWrapper>
@@ -180,18 +200,18 @@ const Header = () => {
                 <StyledCloseButton onClick={closeMenu} />
             </MenuWrapper>
             <MenuOverlay isOpen={isOpen} onClick={closeMenu} />
-            <SocialMediaIconsWrapper>
-                {socialMedia.map(({ name, url, icon: Icon }) => (
-                    <SocialMediaIcon key={name} name={name} url={url}>
-                        <Icon />
-                    </SocialMediaIcon>
-                ))}
-            </SocialMediaIconsWrapper>
             <MenuButton onClick={openMenu}>
                 <HamburgerIcon />
             </MenuButton>
         </Wrapper>
     );
+};
+
+Header.propTypes = {
+    headerState: PropTypes.shape({
+        isStuck: PropTypes.bool,
+        isAnimating: PropTypes.bool,
+    }),
 };
 
 export default Header;
