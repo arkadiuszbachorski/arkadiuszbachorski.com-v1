@@ -68,6 +68,8 @@ const ButtonWrapper = styled.div`
 
 const Technologies = () => {
     const [modalOpen, setModalOpen] = useState(false);
+    const openModal = () => setModalOpen(true);
+    const closeModal = () => setModalOpen(false);
     return (
         <MainWrapper id="technologies">
             <SectionTitle>
@@ -78,11 +80,11 @@ const Technologies = () => {
             </Description>
             <UndrawWrapper />
             <ButtonWrapper>
-                <Button onClick={() => setModalOpen(true)}>
+                <Button onClick={openModal}>
                     <FormattedMessage id="technologies.button" />
                 </Button>
             </ButtonWrapper>
-            <TechnologiesModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
+            <TechnologiesModal isOpen={modalOpen} closeModal={closeModal} />
         </MainWrapper>
     );
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { FormattedMessage } from 'gatsby-plugin-intl';
 import styled from 'styled-components';
 import technologies from '../../../assets/data/technologies';
@@ -39,9 +38,9 @@ const TechnologyGroupListItem = styled.li`
     }
 `;
 
-const TechnologiesModal = ({ modalOpen, setModalOpen }) => {
+const TechnologiesModal = ({ isOpen, closeModal }) => {
     return (
-        <Modal isOpen={modalOpen} setOpen={setModalOpen}>
+        <Modal isOpen={isOpen} closeModal={closeModal}>
             <TechnologiesWrapper>
                 {Object.entries(technologies).map(([key, list]) => (
                     <TechnologyGroupWrapper key={key}>
@@ -61,8 +60,7 @@ const TechnologiesModal = ({ modalOpen, setModalOpen }) => {
 };
 
 TechnologiesModal.propTypes = {
-    modalOpen: PropTypes.bool.isRequired,
-    setModalOpen: PropTypes.func.isRequired,
+    ...Modal.propTypes,
 };
 
 export default TechnologiesModal;

@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FormattedMessage, useIntl } from 'gatsby-plugin-intl';
 import styled from 'styled-components';
-import { ErrorMessage as FormikErrorMessage, Field, Formik, Form as FormikForm } from 'formik';
+import { ErrorMessage as FormikErrorMessage, Field, Form as FormikForm, Formik } from 'formik';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import SectionTitle from '../../atoms/SectionTitle/SectionTitle';
 import SectionWrapper from '../../atoms/SectionWrapper/SectionWrapper';
 import envelopeUndraw from '../../../assets/images/undraw/envelope.svg';
 import Button from '../../atoms/Button/Button';
+import ContactModal from './ContactModal/ContactModal';
+import Loading from '../../atoms/Loading/Loading';
 
 const MainWrapper = styled(SectionWrapper)`
     display: flex;
@@ -66,8 +69,23 @@ const ErrorMessage = styled(FormikErrorMessage)`
 
 const Contact = () => {
     const intl = useIntl();
+    const { executeRecaptcha } = useGoogleReCaptcha();
+    const [modalData, setModalData] = useState({
+        isOpen: false,
+        response: null,
+    });
+
+    const closeModal = () =>
+        setModalData((oldData) => ({
+            ...oldData,
+            isOpen: false,
+        }));
+
     return (
         <MainWrapper id="contact">
+            {modalData.response !== null && (
+                <ContactModal isOpen={modalData.isOpen} closeModal={closeModal} responseData={modalData.response} />
+            )}
             <SectionTitle>
                 <FormattedMessage id="contact.title" />
             </SectionTitle>
@@ -75,7 +93,7 @@ const Contact = () => {
                 <FormattedMessage id="contact.text" />
             </Description>
             <Formik
-                initialValues={{ email: '', message: '' }}
+                initialValues={{ email: '', subject: '', message: '' }}
                 validate={(values) => {
                     const errors = {};
                     if (!values.email) {
@@ -88,10 +106,30 @@ const Contact = () => {
                     }
                     return errors;
                 }}
-                onSubmit={(values, { setSubmitting }) => {
-                    setTimeout(() => {
-                        setSubmitting(false);
-                    }, 5000);
+                onSubmit={async (values, { setSubmitting, resetForm }) => {
+                    const token = await executeRecaptcha('email');
+                    const formData = new FormData();
+                    Object.entries(values).forEach(([key, value]) => {
+                        formData.append(key, value);
+                    });
+                    formData.append('token', token);
+                    const response = await fetch('http://arkadiuszbachorskimail.hekko24.pl/', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept-Language': window.location.href.includes('pl') ? 'pl-PL' : 'en-EN',
+                        },
+                    });
+                    const data = await response.json();
+                    setModalData({
+                        isOpen: true,
+                        response: {
+                            status: response.status,
+                            email: data.email ?? null,
+                        },
+                    });
+                    if (response.status === 200) resetForm();
+                    setSubmitting(false);
                 }}
             >
                 {({ isSubmitting }) => (
@@ -103,6 +141,12 @@ const Contact = () => {
                         />
                         <ErrorMessage name="email" component="div" />
                         <Input
+                            type="subject"
+                            name="subject"
+                            placeholder={intl.formatMessage({ id: 'contact.form.placeholder.subject' })}
+                        />
+                        <ErrorMessage name="subject" component="div" />
+                        <Input
                             component="textarea"
                             name="message"
                             placeholder={intl.formatMessage({ id: 'contact.form.placeholder.message' })}
@@ -110,7 +154,7 @@ const Contact = () => {
                         />
                         <ErrorMessage name="message" component="div" />
                         <Button type="submit" disabled={isSubmitting}>
-                            <FormattedMessage id="contact.form.button" />
+                            {isSubmitting ? <Loading /> : <FormattedMessage id="contact.form.button" />}
                         </Button>
                     </Form>
                 )}

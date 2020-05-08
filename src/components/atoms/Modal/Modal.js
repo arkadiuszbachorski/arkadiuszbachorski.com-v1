@@ -10,7 +10,7 @@ const Wrapper = styled.div`
     top: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 100;
+    z-index: 2000;
     transition: opacity 0.2s;
     display: flex;
     justify-content: center;
@@ -49,8 +49,7 @@ const Content = styled.div`
 
 const classIdentifier = 'modal-closing-background';
 
-const Modal = ({ isOpen, setOpen, children }) => {
-    const closeModal = () => setOpen(false);
+const Modal = ({ isOpen, closeModal, children, className }) => {
     useKeyboardKey('Escape', closeModal);
 
     return (
@@ -64,7 +63,7 @@ const Modal = ({ isOpen, setOpen, children }) => {
                 }}
                 className={classIdentifier}
             />
-            <Content>
+            <Content className={className}>
                 <CloseButton onClick={closeModal} />
                 {children}
             </Content>
@@ -74,8 +73,9 @@ const Modal = ({ isOpen, setOpen, children }) => {
 
 Modal.propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    setOpen: PropTypes.func.isRequired,
-    children: PropTypes.node.isRequired,
+    closeModal: PropTypes.func.isRequired,
+    children: PropTypes.node,
+    className: PropTypes.string,
 };
 
 export default Modal;
