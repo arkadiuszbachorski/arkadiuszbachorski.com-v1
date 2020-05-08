@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Button from '../../../components/Button/Button';
-import animationsDelay, { buttonShadowAnimation, uiAnimation } from '../../../animationsDelay';
+import animationsDelay, { buttonShadowAnimation, buttonAnimation } from '../../../animationsDelay';
 import theme from '../../../theme';
 
 export const Wrapper = styled.div`
@@ -31,7 +31,7 @@ export const Name = styled.h2`
     }
 `;
 export const StyledButton = styled(Button)`
-    animation: ${uiAnimation} 0.2s ${animationsDelay.button}s backwards;
+    animation: ${buttonAnimation} 0.2s ${animationsDelay.button}s backwards;
 
     &::after {
         animation: ${buttonShadowAnimation} 0.3s ${animationsDelay.button + 0.2}s backwards;

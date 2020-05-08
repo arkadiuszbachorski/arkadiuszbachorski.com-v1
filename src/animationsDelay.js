@@ -2,11 +2,22 @@ import { keyframes } from 'styled-components';
 
 export default {
     passion: 0.5,
-    ui: 1.5,
+    socials: 1.5,
     button: 2.5,
 };
 
-export const uiAnimation = keyframes`
+export const socialsAnimation = keyframes`
+    from {
+      opacity: 0;
+      transform: translateY(4rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+`;
+
+export const buttonAnimation = keyframes`
     from {
       opacity: 0;
       transform: scale(0.95);

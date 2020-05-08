@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import landingBackground from '../../assets/images/background.webp';
-import animationsDelay, { uiAnimation } from '../../animationsDelay';
+import animationsDelay, { socialsAnimation } from '../../animationsDelay';
 import theme from '../../theme';
 
 export const MainWrapper = styled.div`
@@ -37,7 +37,7 @@ export const SocialMediaIconsWrapper = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
-    animation: ${uiAnimation} 0.2s ${animationsDelay.ui}s backwards;
+    animation: ${socialsAnimation} 0.2s ${animationsDelay.socials}s backwards;
     position: absolute;
     bottom: 1rem;
     left: 0;
