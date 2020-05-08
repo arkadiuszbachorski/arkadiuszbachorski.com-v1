@@ -85,6 +85,7 @@ export const Name = styled.h3`
     font-size: ${(props) => props.theme.font.size.l};
     text-align: center;
     margin-top: 0;
+    margin-bottom: 1rem;
 
     @media (${(props) => props.theme.mediaQuery.desktop}) {
         text-align: left;
@@ -95,7 +96,7 @@ export const Description = styled.p`
     text-align: justify;
     color: ${(props) => props.theme.colors.muted};
     max-width: 700px;
-    margin: 2rem 0;
+    margin: 1rem 0 1.5rem;
 
     @media (${(props) => props.theme.mediaQuery.desktop}) {
         max-width: none;
@@ -121,4 +122,9 @@ export const ButtonWrapper = styled.nav`
     @media (${(props) => props.theme.mediaQuery.desktop}) {
         justify-content: start;
     }
+`;
+
+export const TagsWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
 `;

@@ -5,6 +5,7 @@ const data = [
     {
         id: 'zhonya',
         name: 'Zhonya',
+        tags: ['pwa', 'react', 'laravel'],
         urls: {
             visit: 'https://www.zhonya.hekko24.pl',
             repository: null,
@@ -13,6 +14,7 @@ const data = [
     {
         id: 'xmake',
         name: 'Xmake',
+        tags: ['library', 'laravel'],
         urls: {
             visit: null,
             repository: 'https://github.com/arkadiuszbachorski/laravel-xmake',

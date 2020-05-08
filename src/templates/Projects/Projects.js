@@ -13,7 +13,9 @@ import {
     Name,
     ProjectFrame,
     ProjectWrapper,
+    TagsWrapper,
 } from './Projects.styled';
+import Badge from '../../components/Badge';
 
 const Projects = () => {
     const projects = useProjectsData();
@@ -31,6 +33,13 @@ const Projects = () => {
                         </ImageWrapper>
                         <DescriptionWrapper>
                             <Name>{project.name}</Name>
+                            <TagsWrapper>
+                                {project.tags.map((tag) => (
+                                    <Badge key={tag}>
+                                        <FormattedMessage id={`projects.tags.${tag}`} />
+                                    </Badge>
+                                ))}
+                            </TagsWrapper>
                             <Description>{project.description}</Description>
                             <ButtonWrapper>
                                 {project.urls.visit && (
