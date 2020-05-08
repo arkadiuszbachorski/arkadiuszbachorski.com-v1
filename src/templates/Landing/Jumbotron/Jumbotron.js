@@ -11,7 +11,15 @@ const Jumbotron = () => {
                 <span>Arkadiusz Bachorski</span>
             </Name>
             <Passion />
-            <StyledButton className="ui-animation">
+            <StyledButton
+                className="ui-animation"
+                onClick={() => {
+                    window.scroll({
+                        top: document.getElementById('aboutMe').getBoundingClientRect().top,
+                        behavior: 'smooth',
+                    });
+                }}
+            >
                 <FormattedMessage id="jumbotron.button" />
             </StyledButton>
         </Wrapper>
