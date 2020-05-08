@@ -13,7 +13,7 @@ const caret = keyframes`
 `;
 
 // eslint-disable-next-line import/prefer-default-export
-export const PassionText = styled.span`
+export const PassionText = styled.h2`
     display: block;
     margin-top: 1rem;
     margin-bottom: 2rem;

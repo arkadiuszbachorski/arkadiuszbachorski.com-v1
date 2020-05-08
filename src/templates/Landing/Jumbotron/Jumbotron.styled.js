@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     position: absolute;
     top: 35vh;
 `;
-export const Name = styled.span`
+export const Name = styled.h2`
     font-size: 1.2rem;
     display: block;
     line-height: 1.4;

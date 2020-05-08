@@ -28,7 +28,7 @@ const Projects = () => {
                 return (
                     <ProjectWrapper key={project.id}>
                         <ImageWrapper>
-                            <Image fluid={project.image.fluid} />
+                            <Image alt={`${project.name} project image`} fluid={project.image.fluid} />
                             <ProjectFrame />
                         </ImageWrapper>
                         <DescriptionWrapper>

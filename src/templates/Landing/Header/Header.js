@@ -30,7 +30,7 @@ const Header = ({ headerState }) => {
                 headerState.isAnimating ? 'is-animating' : ''
             }`}
         >
-            <LogoWrapper>
+            <LogoWrapper title="Arkadiusz Bachorski logo">
                 <Logo />
             </LogoWrapper>
             <MenuWrapper isOpen={isOpen}>

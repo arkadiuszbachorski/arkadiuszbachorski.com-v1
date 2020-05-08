@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 import CloseButton from '../CloseButton/CloseButton';
 import useKeyboardKey from '../../hooks/useKeyboardKey';
 
-const Wrapper = styled.div`
+const Wrapper = styled.div.attrs((props) => ({
+    ariaHidden: !props.isOpen ? 'true' : undefined,
+}))`
     position: fixed;
     left: 0;
     top: 0;
@@ -19,7 +21,10 @@ const Wrapper = styled.div`
     pointer-events: ${(props) => (props.isOpen ? 'auto' : 'none')};
 `;
 
-const CloseWrapper = styled.button`
+const CloseWrapper = styled.button.attrs(() => ({
+    tabIndex: '-1',
+    ariaHidden: 'true',
+}))`
     position: absolute;
     left: 0;
     top: 0;
@@ -64,7 +69,7 @@ const Modal = ({ isOpen, closeModal, children, className }) => {
                 className={classIdentifier}
             />
             <Content className={className}>
-                <CloseButton onClick={closeModal} />
+                <CloseButton focusable={isOpen} onClick={closeModal} />
                 {children}
             </Content>
         </Wrapper>

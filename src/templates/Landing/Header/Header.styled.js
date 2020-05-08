@@ -15,7 +15,9 @@ transform: translateY(0);
 }
 `;
 
-export const LogoWrapper = styled.div`
+export const LogoWrapper = styled.h1`
+    margin: 0;
+    display: block;
     max-width: 60vw;
     animation: ${uiAnimation} 0.2s ${animationsDelay.ui}s backwards;
 
@@ -25,6 +27,14 @@ export const LogoWrapper = styled.div`
 
     @media (min-width: 320px) {
         max-width: 70vw;
+    }
+
+    @media (${(props) => props.theme.mediaQuery.desktop}) {
+        max-width: 350px;
+    }
+
+    @media (${(props) => props.theme.mediaQuery.large}) {
+        max-width: 400px;
     }
 `;
 

@@ -19,11 +19,14 @@ const AnimatedShadowWrapper = styled.div`
         transition: transform 0.25s;
     }
 
-    &:hover::after {
-        transform: translate(
-            ${(props) => props.shadowOffset?.left * -2 ?? 0}px,
-            ${(props) => props.shadowOffset?.top * -2 ?? 0}px
-        );
+    &:hover,
+    &:focus {
+        &::after {
+            transform: translate(
+                ${(props) => props.shadowOffset?.left * -2 ?? 0}px,
+                ${(props) => props.shadowOffset?.top * -2 ?? 0}px
+            );
+        }
     }
 
     &.darker::after {

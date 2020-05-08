@@ -7,7 +7,6 @@ const Btn = styled(AnimatedShadowWrapper)`
     background-color: ${(props) => props.theme.colors.primary};
     color: ${(props) => props.theme.colors.font};
     border: none;
-    outline: none;
     box-shadow: none;
     padding: 0.75rem 2rem;
     cursor: pointer;
