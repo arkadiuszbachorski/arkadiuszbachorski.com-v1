@@ -26,10 +26,10 @@ export const Wrapper = styled.div`
 `;
 
 export const Heading = styled.h2`
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 200;
 
     @media (${(props) => props.theme.mediaQuery.tablet}) {
-        font-size: 3vw;
+        font-size: 2vw;
     }
 `;
