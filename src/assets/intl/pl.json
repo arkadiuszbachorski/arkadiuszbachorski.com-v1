@@ -1,6 +1,6 @@
 {
     "seo.description": "Strona personalna programisty webowego Arkadiusza Bachorskiego",
-    "hi": "Cześć!",
+    "hi": "Witaj!",
     "jumbotron.presentation": "nazywam się ",
     "jumbotron.passion": "jestem Fullstack Web Developerem",
     "jumbotron.button": "Poznamy się?",
@@ -21,11 +21,18 @@
     "contact.title": "Kontakt",
     "contact.text": "Jeśli masz ciekawy pomysł, chciałbyś podjąć współpracę, zadać mi jakieś pytanie lub po prostu porozmawiać - jestem do Twojej dyspozycji!",
     "contact.form.placeholder.email": "Twój adres email",
+    "contact.form.placeholder.subject": "Temat",
     "contact.form.placeholder.message": "W czym mogę pomóc?",
     "contact.form.validation.email.required": "Adres email jest wymagany",
     "contact.form.validation.email.invalid": "Podany adres email jest nieprawidłowy",
     "contact.form.validation.message.required": "Treść wiadomości jest wymagana",
     "contact.form.button": "Wyślij",
+    "contact.form.modal.heading": "Dziękuję za kontakt!",
+    "contact.form.modal.content.200": "Wysyłanie wiadomości przebiegło pomyślnie. Wysłano kopię wiadomości na Twój adres e-mail. Postaram się odpisać jak najszybciej.",
+    "contact.form.modal.content.422": "Niestety nie udało się pomyślnie wysłać wiadomości, ponieważ wprowadzono złe dane. Wprowadź poprawne dane i spróbuj ponownie. W wypadku dalszych niepowodzeń proszę kontaktować się za pomocą social media",
+    "contact.form.modal.content.any400": "Niestety nie udało się pomyślnie wysłać wiadomości. Spróbuj ponownie lub skontaktuj się ze mną za pomocą social media.",
+    "contact.form.modal.content.500": "Niestety nie udało się pomyślnie wysłać wiadomości z powodu awarii serwerów pocztowych. Wyślij proszę wiadomość bezpośrednio na podany poniżej adres.",
+    "contact.form.modal.content.any": "Niestety nie udało się pomyślnie wysłać wiadomości. Wystąpił nieoczekiwany błąd. Proszę skontaktować się ze mną za pomocą social media.",
     "projects.zhonya.description": "Aplikacja zapewniająca użytkownikowi możliwość łatwego mierzenia czasu, który poświęca na wybraną czynność. Usprawnia skrupulatne zarządzanie czasem.",
     "projects.xmake.description": "Komenda Laravel Artisan xmake przyspieszająca proces tworzenia aplikacji poprzez generowanie podobnych zasobów z poziomu CLI."
 }

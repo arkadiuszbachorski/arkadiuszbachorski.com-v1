@@ -107,28 +107,38 @@ const Contact = () => {
                     return errors;
                 }}
                 onSubmit={async (values, { setSubmitting, resetForm }) => {
-                    const token = await executeRecaptcha('email');
-                    const formData = new FormData();
-                    Object.entries(values).forEach(([key, value]) => {
-                        formData.append(key, value);
-                    });
-                    formData.append('token', token);
-                    const response = await fetch('http://arkadiuszbachorskimail.hekko24.pl/', {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept-Language': window.location.href.includes('pl') ? 'pl-PL' : 'en-EN',
-                        },
-                    });
-                    const data = await response.json();
-                    setModalData({
-                        isOpen: true,
-                        response: {
-                            status: response.status,
-                            email: data.email ?? null,
-                        },
-                    });
-                    if (response.status === 200) resetForm();
+                    try {
+                        const token = await executeRecaptcha('email');
+                        const formData = new FormData();
+                        Object.entries(values).forEach(([key, value]) => {
+                            formData.append(key, value);
+                        });
+                        formData.append('token', token);
+                        const response = await fetch('http://arkadiuszbachorskimail.hekko24.pl/', {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept-Language': window.location.href.includes('pl') ? 'pl-PL' : 'en-EN',
+                            },
+                        });
+                        const data = await response.json();
+                        setModalData({
+                            isOpen: true,
+                            response: {
+                                status: response.status,
+                                email: data.email ?? null,
+                            },
+                        });
+                        if (response.status === 200) resetForm();
+                    } catch (error) {
+                        setModalData({
+                            isOpen: true,
+                            response: {
+                                status: 'no-connection',
+                                email: null,
+                            },
+                        });
+                    }
                     setSubmitting(false);
                 }}
             >

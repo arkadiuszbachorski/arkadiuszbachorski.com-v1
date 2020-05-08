@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import 'normalize.css';
 import './font.css';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 const theme = {
     colors: {
@@ -60,14 +61,19 @@ const GlobalStyle = createGlobalStyle`
   p {
     line-height: 1.8;
   }
+  .grecaptcha-badge {
+    display: none !important;
+  }
 `;
 
 const App = ({ children }) => {
     return (
-        <ThemeProvider theme={theme}>
-            <GlobalStyle />
-            {children}
-        </ThemeProvider>
+        <GoogleReCaptchaProvider reCaptchaKey={process.env.GATSBY_GOOGLE_CAPTCHA_PUBLIC_KEY}>
+            <ThemeProvider theme={theme}>
+                <GlobalStyle />
+                {children}
+            </ThemeProvider>
+        </GoogleReCaptchaProvider>
     );
 };
 

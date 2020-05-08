@@ -1,6 +1,6 @@
 {
     "seo.description": "Personal website of programmer Arkadiusz Bachorski",
-    "hi": "Hi!",
+    "hi": "Welcome!",
     "jumbotron.presentation": "my name is",
     "jumbotron.passion": "I am Fullstack Web Developer",
     "jumbotron.button": "Let's meet!",
@@ -21,11 +21,18 @@
     "contact.title": "Contact",
     "contact.text": "If you have some interesting idea, would like to cooperate, ask me a question or just talk - don't hesitate to ask me!",
     "contact.form.placeholder.email": "Your e-mail address",
+    "contact.form.placeholder.subject": "Subject",
     "contact.form.placeholder.message": "How can I help you?",
     "contact.form.validation.email.required": "E-mail address is required",
     "contact.form.validation.email.invalid": "Invalid e-mail address",
     "contact.form.validation.message.required": "Message is required",
     "contact.form.button": "Send",
+    "contact.form.modal.heading": "Thank you for your message!",
+    "contact.form.modal.content.200": "A message was successfully sent. I sent a copy to your e-mail address also. I will try to answer as soon as possible.",
+    "contact.form.modal.content.422": "Unfortunately, sending message failed due the data entered was wrong. Enter correct data and try again. Contact me via social media in case of further failures.",
+    "contact.form.modal.content.any400": "Unfortunately, sending message failed. Try again or contact me via social media.",
+    "contact.form.modal.content.500": "Unfortunately, sending message failed due to the failure of mail servers. Please send a message directly to the address below.",
+    "contact.form.modal.content.any": "Unfortunately, sending message failed. Unexpected error occurred. Please contact me via social media.",
     "projects.zhonya.description": "Zhonya is an application that allows users to easily measure time which they spend on specific activity to improve their time management possibilities.",
     "projects.xmake.description": "Additional Laravel Artisan xmake command for faster resource creating and scaffolding. Created to speed up developing process."
 }
