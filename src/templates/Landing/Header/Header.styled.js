@@ -1,6 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import animationsDelay, { uiAnimation } from '../../../animationsDelay';
 import landingBackground from '../../../assets/images/landing-background.jpg';
 import CloseButton from '../../../components/CloseButton/CloseButton';
 import theme from '../../../theme';
@@ -20,7 +19,6 @@ export const LogoWrapper = styled.h1`
     margin: 0;
     display: block;
     max-width: 60vw;
-    animation: ${uiAnimation} 0.2s ${animationsDelay.ui}s backwards;
 
     svg {
         width: 100%;
@@ -105,7 +103,6 @@ export const MenuWrapper = styled.nav`
         top: 0;
         left: 0;
         align-items: center;
-        animation: ${uiAnimation} 0.2s ${animationsDelay.ui}s backwards;
     }
 `;
 
@@ -133,7 +130,6 @@ export const MenuButton = styled.button`
     width: 4rem;
     height: 4rem;
     padding: 0;
-    animation: ${uiAnimation} 0.2s ${animationsDelay.ui}s backwards;
 
     svg {
         transform: scale(1.4);
