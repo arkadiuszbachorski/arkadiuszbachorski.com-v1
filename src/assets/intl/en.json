@@ -7,7 +7,7 @@
     "jumbotron.button": "Let's meet!",
     "aboutMe.title": "About me",
     "aboutMe.text1": "I've been interested in IT since I was a child. My parents say I typed my first words on keyboard instead of writing them on paper. At the beginning of Technical High School for Computer Science I took a serious interest in programming and I fell in love with it. Since then, I've been fulfilling my dream of being the best programmer I can.",
-    "aboutMe.text2": "I am a fan of new technologies, dark theme everywhere I can, keyboard shortcuts and automating everything. I my spare time, when I'm not reading any documentation or dev.to article, I like to ride a motorcycle, run or read books. I also enjoy going out for a ramen noodles, butter chicken or some Baltic Porter with my friends. I almost never part with my headphones. I always have a job, I never get bored.",
+    "aboutMe.text2": "I am a fan of new technologies, dark theme everywhere I can, keyboard shortcuts and automating everything. In my spare time, when I'm not reading any documentation or dev.to article, I like to ride a motorcycle, run or read books. I also enjoy going out for a ramen noodles, butter chicken or some Baltic Porter with my friends. I almost never part with my headphones. I always have a job, I never get bored.",
     "technologies.title": "Technologies",
     "technologies.text": "On the front-end I prefer to use React with styled-components, Redux and Jest tests. On the server side, so far I bet on Laravel and MySQL, but I plan to learn Express. I focus mainly on code quality and user experience. I am not afraid of simple design, but I don't go beyond my own needs.",
     "technologies.button": "See complete list of technologies",

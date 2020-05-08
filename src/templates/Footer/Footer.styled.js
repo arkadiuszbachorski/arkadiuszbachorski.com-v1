@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 export const FooterContainer = styled.footer`
     display: flex;
@@ -23,9 +24,19 @@ export const IconsContainer = styled.div`
 export const Text = styled.span`
     text-align: center;
     width: 100%;
-    margin-top: 4rem;
 
     span {
         color: ${(props) => props.theme.colors.primary};
     }
+`;
+
+export const LanguageSwitcherWrapper = styled.div`
+    display: flex;
+    margin: 2rem 0;
+`;
+
+export const LanguageLink = styled(Link)`
+    margin: 0 0.5rem;
+    padding: 1rem;
+    color: ${(props) => props.theme.colors.primary};
 `;
