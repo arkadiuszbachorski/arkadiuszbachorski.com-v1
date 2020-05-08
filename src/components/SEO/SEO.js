@@ -25,8 +25,8 @@ function SEO({ description, lang, meta, title }) {
             htmlAttributes={{
                 lang,
             }}
-            title={site.siteMetadata.title}
-            titleTemplate={site.siteMetadata.title}
+            title={title || site.siteMetadata.title}
+            titleTemplate="Arkadiusz Bachorski | %s"
             meta={[
                 {
                     name: `description`,

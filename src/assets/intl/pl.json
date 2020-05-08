@@ -1,6 +1,9 @@
 {
     "close": "Zamknij",
-    "seo.description": "Strona personalna fullstack web developera Arkadiusza Bachorskiego. Portfolio, kilka słów o mnie oraz kontakt.",
+    "seo.title.index": "Fullstack Web Developer",
+    "seo.description.index": "Strona personalna fullstack web developera Arkadiusza Bachorskiego. Portfolio, kilka słów o mnie oraz kontakt.",
+    "seo.title.404": "Nie znaleziono strony",
+    "404.backToMain": "Wróć do strony głównej",
     "jumbotron.presentation": "nazywam się ",
     "jumbotron.passion": "jestem Fullstack Web Developerem",
     "jumbotron.button": "Poznaj mnie",

@@ -1,6 +1,9 @@
 {
     "close": "Close",
-    "seo.description": "Personal website by fullstack web developer Arkadiusz Bachorski. Portfolio, few words about me and contact.",
+    "seo.title.index": "Fullstack Web Developer",
+    "seo.description.index": "Personal website by fullstack web developer Arkadiusz Bachorski. Portfolio, few words about me and contact.",
+    "seo.title.404": "Page not found",
+    "404.backToMain": "Return to main page",
     "jumbotron.presentation": "my name is",
     "jumbotron.passion": "I am Fullstack Web Developer",
     "jumbotron.button": "Meet me",

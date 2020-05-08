@@ -11,6 +11,7 @@ export const MainWrapper = styled(SectionWrapper)`
     margin-right: auto;
     display: flex;
     align-items: center;
+    margin-top: 4rem;
 `;
 
 export const GridWrapper = styled.div`

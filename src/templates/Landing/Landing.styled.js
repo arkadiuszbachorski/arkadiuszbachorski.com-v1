@@ -8,15 +8,11 @@ export const MainWrapper = styled.div`
     position: relative;
     height: 100vh;
     min-height: 500px;
-    margin-bottom: 4rem;
-
     color: ${theme.colors.background};
 
     @media (${theme.mediaQuery.desktop}) {
         min-height: 800px;
         padding: 2.8rem;
-
-        margin-bottom: 5rem;
     }
 
     &::after {

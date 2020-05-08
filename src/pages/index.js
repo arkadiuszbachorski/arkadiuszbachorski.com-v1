@@ -8,14 +8,20 @@ import Contact from '../templates/Contact/Contact';
 import Technologies from '../templates/Technologies/Technologies';
 import AboutMe from '../templates/AboutMe/AboutMe';
 import Landing from '../templates/Landing/Landing';
+import Jumbotron from '../templates/Landing/Jumbotron/Jumbotron';
 
 const Index = () => {
     const intl = useIntl();
 
     return (
         <App>
-            <SEO description={intl.formatMessage({ id: 'seo.description' })} />
-            <Landing />
+            <SEO
+                description={intl.formatMessage({ id: 'seo.description.index' })}
+                title={intl.formatMessage({ id: 'seo.title.index' })}
+            />
+            <Landing>
+                <Jumbotron />
+            </Landing>
             <AboutMe />
             <Technologies />
             <Projects />
