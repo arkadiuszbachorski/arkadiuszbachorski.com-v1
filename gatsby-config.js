@@ -4,8 +4,8 @@ require('dotenv').config({
 
 module.exports = {
     siteMetadata: {
-        title: `Arkadiusz Bachorski`,
-        description: `todo`,
+        title: `Arkadiusz Bachorski | Fullstack Web Developer`,
+        description: ``,
         author: `Arkadiusz Bachorski`,
     },
     plugins: [

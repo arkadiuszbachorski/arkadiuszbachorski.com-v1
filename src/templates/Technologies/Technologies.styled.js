@@ -50,7 +50,7 @@ export const Description = styled.p`
 
 export const ButtonWrapper = styled.div`
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 2rem;
     max-width: 700px;
     order: 4;
     display: flex;

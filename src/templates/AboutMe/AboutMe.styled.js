@@ -47,8 +47,8 @@ export const ProfileDrawing = styled(Profile)`
 
     @media (${(props) => props.theme.mediaQuery.desktop}) {
         display: block;
-        width: 250px;
-        height: 180px;
+        width: 220px;
+        height: 150px;
         align-self: start;
     }
 `;
