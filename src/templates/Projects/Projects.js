@@ -15,7 +15,7 @@ import {
     ProjectWrapper,
     TagsWrapper,
 } from './Projects.styled';
-import Badge from '../../components/Badge';
+import Badge from '../../components/Badge/Badge';
 
 const Projects = () => {
     const projects = useProjectsData();

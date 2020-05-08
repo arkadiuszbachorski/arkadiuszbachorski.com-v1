@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import SectionWrapper from '../../components/SectionWrapper/SectionWrapper';
 import reactUndraw from '../../assets/images/undraw/react.svg';
+import theme from '../../theme';
 
 export const MainWrapper = styled(SectionWrapper)`
     display: flex;
@@ -11,7 +12,7 @@ export const MainWrapper = styled(SectionWrapper)`
     flex-direction: column;
     align-items: center;
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: flex-start;
@@ -28,7 +29,7 @@ export const UndrawWrapper = styled.div`
     width: 300px;
     height: 200px;
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         order: 3;
         width: 400px;
         height: 250px;
@@ -41,7 +42,7 @@ export const Description = styled.p`
 
     order: 3;
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         width: 500px;
         margin-top: 0;
         order: 2;
@@ -56,7 +57,7 @@ export const ButtonWrapper = styled.div`
     display: flex;
     justify-content: center;
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         justify-content: flex-start;
     }
 `;

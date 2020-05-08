@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import theme from '../../theme';
 
 const bounce = keyframes`
     0%   { transform: scale(1,1)    translateY(0); }
@@ -20,8 +21,8 @@ const Dot = styled.span`
     margin: 0 0.25rem;
     display: inline-block;
     border-radius: 100%;
-    background-color: ${(props) => props.theme.colors.primary};
-    animation: ${bounce} 1.5s ${(props) => props.animationDelay}s infinite;
+    background-color: ${theme.colors.primary};
+    animation: ${bounce} 1.5s ${(props) => `${props.animationDelay}s`} infinite;
 `;
 
 const Loading = () => {

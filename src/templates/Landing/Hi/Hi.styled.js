@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import animationsDelay from '../../../animationsDelay';
+import theme from '../../../theme';
 
 const wrapperAnimation = keyframes`
     from {
@@ -17,7 +18,7 @@ export const Wrapper = styled.div`
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: ${(props) => props.theme.colors.font};
+    background-color: ${theme.colors.font};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +30,7 @@ export const Heading = styled.h2`
     font-size: 2rem;
     font-weight: 200;
 
-    @media (${(props) => props.theme.mediaQuery.tablet}) {
+    @media (${theme.mediaQuery.tablet}) {
         font-size: 2vw;
     }
 `;

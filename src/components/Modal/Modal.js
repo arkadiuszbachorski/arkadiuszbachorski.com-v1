@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import CloseButton from '../CloseButton/CloseButton';
 import useKeyboardKey from '../../hooks/useKeyboardKey';
+import theme from '../../theme';
 
 const Wrapper = styled.div.attrs((props) => ({
     ariaHidden: !props.isOpen ? 'true' : undefined,
@@ -32,7 +33,7 @@ const CloseWrapper = styled.button.attrs(() => ({
     height: 100vh;
     z-index: -5;
     transition: opacity 0.2s;
-    background-color: ${(props) => `${props.theme.colors.primary}CC`};
+    background-color: ${`${theme.colors.primary}CC`};
     opacity: ${(props) => (props.isOpen ? 1 : 0)};
     pointer-events: ${(props) => (props.isOpen ? 'auto' : 'none')};
     display: flex;
@@ -47,8 +48,8 @@ const Content = styled.div`
     padding: 2rem;
     max-width: 90vw;
     max-height: 90vh;
-    border: 2px solid ${(props) => props.theme.colors.font};
-    box-shadow: 5px 5px 0 ${(props) => props.theme.colors.primary};
+    border: 2px solid ${theme.colors.font};
+    box-shadow: 5px 5px 0 ${theme.colors.primary};
     overflow-y: auto;
 `;
 

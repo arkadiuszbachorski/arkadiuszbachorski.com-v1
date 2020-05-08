@@ -13,6 +13,18 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {
+            resolve: 'gatsby-plugin-eslint',
+            options: {
+                test: /\.js$/,
+                exclude: /(node_modules|.cache|public)/,
+                stages: ['develop'],
+                options: {
+                    emitWarning: true,
+                    failOnError: false
+                }
+            }
+        },
+        {
             resolve: `gatsby-plugin-manifest`,
             options: {
                 name: `Arkadiusz Bachorski`,
@@ -43,19 +55,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-styled-components`,
             options: {
-                // Add any options here
-            },
-        },
-        {
-            resolve: 'gatsby-plugin-eslint',
-            options: {
-                test: /\.js$|\.jsx$/,
-                exclude: /(node_modules|.cache|public)/,
-                stages: ['develop'],
-                options: {
-                    emitWarning: true,
-                    failOnError: false,
-                },
+                displayName: false,
             },
         },
         {

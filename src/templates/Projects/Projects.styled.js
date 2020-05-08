@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import SectionWrapper from '../../components/SectionWrapper/SectionWrapper';
 import ProjectFrameSVG from '../../assets/images/undraw/project-frame.inline.svg';
+import theme from '../../theme';
 
 export const MainWrapper = styled(SectionWrapper)`
     display: flex;
@@ -18,7 +19,7 @@ export const ProjectWrapper = styled.article`
     align-items: center;
     position: relative;
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         flex-direction: row;
     }
 
@@ -33,13 +34,13 @@ export const ProjectWrapper = styled.article`
             width: 300px;
             left: calc(50% - 150px);
             bottom: -4rem;
-            border-top: 1px solid ${(props) => props.theme.colors.accent};
+            border-top: 1px solid ${theme.colors.accent};
         }
     }
 `;
 
 export const DescriptionWrapper = styled.div`
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         margin-left: 4rem;
     }
 `;
@@ -51,7 +52,7 @@ export const ImageWrapper = styled.div`
     margin-bottom: 2rem;
     position: relative;
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         margin-bottom: 0;
     }
 `;
@@ -60,9 +61,9 @@ export const Image = styled(Img)`
     width: 100%;
     position: relative;
     overflow: visible !important;
-    box-shadow: 5px 5px 0 ${(props) => props.theme.colors.primary};
+    box-shadow: 5px 5px 0 ${theme.colors.primary};
 
-    @media (${(props) => props.theme.mediaQuery.tablet}) {
+    @media (${theme.mediaQuery.tablet}) {
         position: absolute !important;
         width: 322px;
         height: 179px;
@@ -76,29 +77,29 @@ export const Image = styled(Img)`
 export const ProjectFrame = styled(ProjectFrameSVG)`
     display: none;
 
-    @media (${(props) => props.theme.mediaQuery.tablet}) {
+    @media (${theme.mediaQuery.tablet}) {
         display: block;
     }
 `;
 
 export const Name = styled.h3`
-    font-size: ${(props) => props.theme.font.size.l};
+    font-size: ${theme.font.size.l};
     text-align: center;
     margin-top: 0;
     margin-bottom: 1rem;
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         text-align: left;
     }
 `;
 
 export const Description = styled.p`
     text-align: justify;
-    color: ${(props) => props.theme.colors.muted};
+    color: ${theme.colors.muted};
     max-width: 700px;
     margin: 1rem 0 1.5rem;
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         max-width: none;
     }
 `;
@@ -113,13 +114,13 @@ export const ButtonWrapper = styled.nav`
         margin-right: 1rem;
     }
 
-    @media (${(props) => props.theme.mediaQuery.tablet}) {
+    @media (${theme.mediaQuery.tablet}) {
         justify-content: center;
         align-items: center;
         grid-template-columns: auto auto;
     }
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         justify-content: start;
     }
 `;

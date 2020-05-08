@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import AnimatedShadowWrapper from '../ShadowWrapper/AnimatedShadowWrapper';
+import theme from '../../theme';
 
 const Btn = styled(AnimatedShadowWrapper)`
-    background-color: ${(props) => props.theme.colors.primary};
-    color: ${(props) => props.theme.colors.font};
+    background-color: ${theme.colors.primary};
+    color: ${theme.colors.font};
     border: none;
     box-shadow: none;
     padding: 0.75rem 2rem;
@@ -15,7 +16,7 @@ const Btn = styled(AnimatedShadowWrapper)`
 
     &:disabled {
         cursor: default;
-        background-color: ${(props) => props.theme.colors.accent};
+        background-color: ${theme.colors.accent};
 
         &::after {
             opacity: 0.4;

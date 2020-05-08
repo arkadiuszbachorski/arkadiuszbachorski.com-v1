@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import SectionWrapper from '../../components/SectionWrapper/SectionWrapper';
 import Profile from '../../assets/images/undraw/profile.inline.svg';
+import theme from '../../theme';
 
 export const MainWrapper = styled(SectionWrapper)`
     max-width: 1200px;
@@ -22,7 +23,7 @@ export const GridWrapper = styled.div`
         'text1'
         'text2';
 
-    @media (${(props) => props.theme.mediaQuery.tablet}) {
+    @media (${theme.mediaQuery.tablet}) {
         max-width: 700px;
         grid-template-rows: auto auto;
         grid-template-columns: 200px auto;
@@ -31,7 +32,7 @@ export const GridWrapper = styled.div`
             'text2 text2';
     }
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         max-width: 100%;
         grid-template-rows: auto auto;
         grid-template-columns: 250px auto minmax(200px, 15vw);
@@ -45,7 +46,7 @@ export const ProfileDrawing = styled(Profile)`
     grid-area: profile;
     display: none;
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         display: block;
         width: 220px;
         height: 150px;
@@ -60,7 +61,7 @@ export const Text = styled.p`
 export const FirstText = styled(Text)`
     grid-area: text1;
 
-    @media (${(props) => props.theme.mediaQuery.tablet}) {
+    @media (${theme.mediaQuery.tablet}) {
         margin-left: 2rem;
         margin-top: 0;
     }
@@ -75,16 +76,16 @@ export const Image = styled(Img)`
     grid-area: photo;
     width: 170px;
     height: 222px;
-    border: 2px solid ${(props) => props.theme.colors.font};
-    box-shadow: 10px 10px 0 ${(props) => props.theme.colors.primary};
+    border: 2px solid ${theme.colors.font};
+    box-shadow: 10px 10px 0 ${theme.colors.primary};
     margin-right: 10px;
     margin-bottom: 10px;
 
-    @media (${(props) => props.theme.mediaQuery.tablet}) {
+    @media (${theme.mediaQuery.tablet}) {
         justify-self: left;
     }
 
-    @media (${(props) => props.theme.mediaQuery.tablet}) {
+    @media (${theme.mediaQuery.tablet}) {
         place-self: center right;
     }
 `;

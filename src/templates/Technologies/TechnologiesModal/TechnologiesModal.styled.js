@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../../theme';
 
 export const TechnologiesWrapper = styled.div`
     display: flex;
@@ -25,7 +26,7 @@ export const TechnologyGroupListItem = styled.li`
     &::before {
         content: '';
         display: inline-block;
-        background: ${(props) => props.theme.colors.primary};
+        background: ${theme.colors.primary};
         width: 0.5rem;
         height: 0.5rem;
         position: relative;

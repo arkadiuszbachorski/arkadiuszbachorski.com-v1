@@ -3,6 +3,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import animationsDelay, { uiAnimation } from '../../../animationsDelay';
 import landingBackground from '../../../assets/images/landing-background.jpg';
 import CloseButton from '../../../components/CloseButton/CloseButton';
+import theme from '../../../theme';
 
 const headerStickingAnimation = keyframes`
 from {
@@ -29,11 +30,11 @@ export const LogoWrapper = styled.h1`
         max-width: 70vw;
     }
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         max-width: 350px;
     }
 
-    @media (${(props) => props.theme.mediaQuery.large}) {
+    @media (${theme.mediaQuery.large}) {
         max-width: 400px;
     }
 `;
@@ -50,18 +51,17 @@ export const Wrapper = styled.header`
         position: fixed;
         top: 0;
         left: 0;
-
         width: 100%;
         z-index: 300;
         padding: 0.25rem 1rem;
-        border-bottom: 2px solid ${(props) => props.theme.colors.primary};
+        border-bottom: 2px solid ${theme.colors.primary};
         color: white;
         background-image: url(${landingBackground});
         background-repeat: no-repeat;
         background-position: center top;
         background-size: cover;
 
-        @media (${(props) => props.theme.mediaQuery.desktop}) {
+        @media (${theme.mediaQuery.desktop}) {
             padding: 1rem 2.8rem;
         }
     }
@@ -79,8 +79,8 @@ export const Wrapper = styled.header`
 export const MenuWrapper = styled.nav`
     display: flex;
     flex-direction: column;
-    background-color: ${(props) => props.theme.colors.background};
-    box-shadow: 5px 0 0 ${(props) => props.theme.colors.primary};
+    background-color: ${theme.colors.background};
+    box-shadow: 5px 0 0 ${theme.colors.primary};
     padding: 2rem 0;
     width: 280px;
     height: 100vh;
@@ -92,7 +92,7 @@ export const MenuWrapper = styled.nav`
     align-items: center;
     z-index: 1001;
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         width: unset;
         height: unset;
         padding: 0;
@@ -111,18 +111,18 @@ export const MenuWrapper = styled.nav`
 
 export const MenuItem = styled(AnchorLink)`
     margin: 2rem;
-    font-size: ${(props) => props.theme.font.size.l};
-    color: ${(props) => props.theme.colors.font};
+    font-size: ${theme.font.size.l};
+    color: ${theme.colors.font};
     text-decoration: none;
     transition: color 0.3s;
 
     &:hover {
-        color: ${(props) => props.theme.colors.primary};
+        color: ${theme.colors.primary};
     }
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         margin: 0 0 0 3rem;
-        color: ${(props) => props.theme.colors.background};
+        color: ${theme.colors.background};
     }
 `;
 
@@ -140,10 +140,10 @@ export const MenuButton = styled.button`
     }
 
     path {
-        color: ${(props) => props.theme.colors.background};
+        color: ${theme.colors.background};
     }
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         display: none;
     }
 `;
@@ -156,7 +156,7 @@ export const MenuOverlay = styled.button`
     height: 100vh;
     z-index: 1000;
     transition: opacity 0.2s;
-    background-color: ${(props) => `${props.theme.colors.primary}CC`};
+    background-color: ${`${theme.colors.primary}CC`};
     opacity: ${(props) => (props.isOpen ? 1 : 0)};
     pointer-events: ${(props) => (props.isOpen ? 'auto' : 'none')};
     display: flex;
@@ -164,14 +164,14 @@ export const MenuOverlay = styled.button`
     align-items: center;
     border: 0;
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         display: none;
         pointer-events: none;
     }
 `;
 
 export const StyledCloseButton = styled(CloseButton)`
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         display: none;
     }
 `;

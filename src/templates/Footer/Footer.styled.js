@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import theme from '../../theme';
 
 export const FooterContainer = styled.footer`
     display: flex;
@@ -8,7 +9,7 @@ export const FooterContainer = styled.footer`
     flex-direction: column;
     margin: 8rem 0 2rem;
 
-    @media (${(props) => props.theme.mediaQuery.tablet}) {
+    @media (${theme.mediaQuery.tablet}) {
         margin-top: 14rem;
     }
 `;
@@ -26,7 +27,7 @@ export const Text = styled.span`
     width: 100%;
 
     span {
-        color: ${(props) => props.theme.colors.primary};
+        color: ${theme.colors.primary};
     }
 `;
 
@@ -38,5 +39,5 @@ export const LanguageSwitcherWrapper = styled.div`
 export const LanguageLink = styled(Link)`
     margin: 0 0.5rem;
     padding: 1rem;
-    color: ${(props) => props.theme.colors.primary};
+    color: ${theme.colors.primary};
 `;

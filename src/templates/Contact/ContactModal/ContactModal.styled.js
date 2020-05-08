@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Modal from '../../../components/Modal/Modal';
 import mailSent from '../../../assets/images/undraw/mail-sent.svg';
 import mailSentFailure from '../../../assets/images/undraw/mail-sent-failure.svg';
+import theme from '../../../theme';
 
 export const StyledModal = styled(Modal)`
     margin: 1rem;
@@ -13,7 +14,7 @@ export const Heading = styled.h6`
     font-size: 1.4rem;
     margin: 1rem 0;
 
-    @media (${(props) => props.theme.mediaQuery.tablet}) {
+    @media (${theme.mediaQuery.tablet}) {
         font-size: 2rem;
     }
 `;
@@ -23,7 +24,7 @@ export const ContentWrapper = styled.div`
     flex-direction: column;
     align-items: center;
 
-    @media (${(props) => props.theme.mediaQuery.tablet}) {
+    @media (${theme.mediaQuery.tablet}) {
         flex-wrap: wrap;
         flex-direction: row;
     }
@@ -50,7 +51,7 @@ export const Text = styled.p`
     text-align: justify;
     display: block;
 
-    @media (${(props) => props.theme.mediaQuery.tablet}) {
+    @media (${theme.mediaQuery.tablet}) {
         width: calc(100% - 250px);
     }
 `;

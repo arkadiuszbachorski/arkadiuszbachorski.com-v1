@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import AnimatedShadowWrapper from '../ShadowWrapper/AnimatedShadowWrapper';
 
-const iconWrapperRules = `
+const ShadowIconWrapper = styled(AnimatedShadowWrapper)`
     width: 3.5rem;
     height: 3.5rem;
     display: flex;
@@ -11,12 +11,12 @@ const iconWrapperRules = `
     align-items: center;
 `;
 
-const ShadowIconWrapper = styled(AnimatedShadowWrapper)`
-    ${iconWrapperRules}
-`;
-
 const IconWrapper = styled.div`
-    ${iconWrapperRules}
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 const SocialMediaIcon = ({ url, children, name, withShadow }) => {

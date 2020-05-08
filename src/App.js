@@ -1,48 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import 'normalize.css';
 import './font.css';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
-
-const theme = {
-    colors: {
-        font: '#000000',
-        background: '#FFFFFF',
-        primary: '#F07178',
-        primaryDarker: '#C35C61',
-        secondary: '#3F3D56',
-        muted: '#0000007F',
-        accent: '#e7e7e7',
-    },
-    font: {
-        family: {
-            main: "'Poppins', sans-serif",
-        },
-        size: {
-            base: '16px',
-            xs: '.7rem',
-            s: '.8rem',
-            m: '1rem',
-            l: '1.4rem',
-            xl: '2.2rem',
-            xxl: '3rem',
-            xxxl: '4rem',
-        },
-    },
-    mediaQuery: {
-        tablet: `min-width: 768px`,
-        desktop: `min-width: 1024px`,
-        large: `min-width: 1440px`,
-    },
-};
+import theme from './theme';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: ${(props) => props.theme.font.family.main};
-    font-size: ${(props) => props.theme.font.size.base};
-    color: ${(props) => props.theme.colors.font};
-    background-color: ${(props) => props.theme.colors.background};
+    font-family: ${theme.font.family.main};
+    font-size: ${theme.font.size.base};
+    color: ${theme.colors.font};
+    background-color: ${theme.colors.background};
   }
 
   *, *::after, *::before {
@@ -50,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   .svg-inline--fa {
-    color: ${(props) => props.theme.colors.font};
+    color: ${theme.colors.font};
     height: 2rem;
   }
   
@@ -61,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
   p {
     line-height: 1.8;
   }
+  
   .grecaptcha-badge {
     display: none !important;
   }
@@ -69,10 +39,8 @@ const GlobalStyle = createGlobalStyle`
 const App = ({ children }) => {
     return (
         <GoogleReCaptchaProvider reCaptchaKey={process.env.GATSBY_GOOGLE_CAPTCHA_PUBLIC_KEY}>
-            <ThemeProvider theme={theme}>
-                <GlobalStyle />
-                {children}
-            </ThemeProvider>
+            <GlobalStyle />
+            {children}
         </GoogleReCaptchaProvider>
     );
 };

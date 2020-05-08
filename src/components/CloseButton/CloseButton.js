@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useIntl } from 'gatsby-plugin-intl';
 import CloseIcon from '../../assets/images/icons/close.inline.svg';
+import theme from '../../theme';
 
 const Close = styled.button.attrs((props) => ({
     tabIndex: !props.focusable ? '-1' : undefined,
@@ -13,12 +14,12 @@ const Close = styled.button.attrs((props) => ({
     right: 0.5rem;
     width: 3rem;
     height: 3rem;
-    background-color: ${(props) => props.theme.colors.background};
+    background-color: ${theme.colors.background};
     border: none;
     cursor: pointer;
 
     svg {
-        color: ${(props) => props.theme.colors.primary};
+        color: ${theme.colors.primary};
         transform: scale(1.5);
     }
 `;

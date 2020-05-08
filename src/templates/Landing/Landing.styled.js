@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import landingBackground from '../../assets/images/landing-background.jpg';
+import landingBackground from '../../assets/images/background.webp';
 import animationsDelay, { uiAnimation } from '../../animationsDelay';
+import theme from '../../theme';
 
 export const MainWrapper = styled.div`
     padding: 1rem;
@@ -9,9 +10,9 @@ export const MainWrapper = styled.div`
     min-height: 500px;
     margin-bottom: 4rem;
 
-    color: ${(props) => props.theme.colors.background};
+    color: ${theme.colors.background};
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         min-height: 800px;
         padding: 2.8rem;
 
@@ -43,13 +44,13 @@ export const SocialMediaIconsWrapper = styled.div`
 
     > *:hover {
         path {
-            color: ${(props) => props.theme.colors.primary};
+            color: ${theme.colors.primary};
         }
     }
 
     path {
         transition: color 0.3s;
-        color: ${(props) => props.theme.colors.background};
+        color: ${theme.colors.background};
     }
 
     > * {

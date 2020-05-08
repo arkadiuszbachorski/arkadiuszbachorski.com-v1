@@ -1,14 +1,15 @@
 import styled from 'styled-components';
+import theme from '../../theme';
 
 const SectionTitle = styled.h2`
     width: 100%;
     text-align: center;
     font-weight: 400;
     margin-bottom: 2rem;
-    font-size: ${(props) => props.theme.font.size.xl};
+    font-size: ${theme.font.size.xl};
     position: relative;
 
-    @media (${(props) => props.theme.mediaQuery.tablet}) {
+    @media (${theme.mediaQuery.tablet}) {
         margin-bottom: 3.5rem;
     }
 
@@ -17,7 +18,7 @@ const SectionTitle = styled.h2`
         position: absolute;
         width: 60px;
         height: 1px;
-        background-color: ${(props) => props.theme.colors.accent};
+        background-color: ${theme.colors.accent};
         bottom: -0.75rem;
         left: calc(50% - 30px);
     }

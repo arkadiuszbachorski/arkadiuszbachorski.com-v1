@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import theme from '../../../../theme';
 
 const caret = keyframes`
     0% {
@@ -25,7 +26,7 @@ export const PassionText = styled.h2`
         font-size: 5vw;
     }
 
-    @media (${(props) => props.theme.mediaQuery.desktop}) {
+    @media (${theme.mediaQuery.desktop}) {
         font-size: 4vw;
         font-weight: 200;
     }
@@ -37,7 +38,7 @@ export const PassionText = styled.h2`
         width: 6px;
         height: 100%;
         color: transparent;
-        background-color: ${(props) => props.theme.colors.primary};
+        background-color: ${theme.colors.primary};
     }
 
     &:not(.is-typing)::after {
