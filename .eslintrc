@@ -9,7 +9,9 @@
   "parser": "babel-eslint",
   "globals": {
     "window": true,
-    "document": true
+    "document": true,
+    "fetch": true,
+    "FormData": true,
   },
   "settings": {
     "import/resolver": {

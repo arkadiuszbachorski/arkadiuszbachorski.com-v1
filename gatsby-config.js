@@ -13,6 +13,15 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {
+            resolve: `gatsby-plugin-google-fonts`,
+            options: {
+                fonts: [
+                    `poppins\:200,400` // you can also specify font weights and styles
+                ],
+                display: 'swap'
+            }
+        },
+        {
             resolve: 'gatsby-plugin-eslint',
             options: {
                 test: /\.js$/,

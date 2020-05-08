@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { createGlobalStyle } from 'styled-components';
 import 'normalize.css';
-import './font.css';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import theme from './theme';
 
