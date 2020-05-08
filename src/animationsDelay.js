@@ -1,10 +1,9 @@
 import { keyframes } from 'styled-components';
 
 export default {
-    hi: 1,
-    passion: 2,
-    ui: 1.5,
-    button: 4,
+    passion: 1.5,
+    ui: 1,
+    button: 3.5,
 };
 
 export const uiAnimation = keyframes`

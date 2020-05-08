@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import Jumbotron from './Jumbotron/Jumbotron';
 import Header from './Header/Header';
-import Hi from './Hi/Hi';
 import socialMedia from '../../assets/data/socialMedia';
 import SocialMediaIcon from '../../components/SocialIcon/SocialMediaIcon';
 import useStickyNavbar from '../../hooks/useStickyNavbar';
@@ -14,7 +13,6 @@ const Landing = () => {
     return (
         <MainWrapper ref={landingRef}>
             <Header headerState={headerState} />
-            <Hi />
             <Jumbotron />
             <SocialMediaIconsWrapper>
                 {socialMedia.map(({ name, url, icon: Icon }) => (
