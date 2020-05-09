@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import landingBackground from '../../../assets/images/landing-background.jpg';
+import landingBackground from '../../../assets/images/background.webp';
 import CloseButton from '../../../components/CloseButton/CloseButton';
 import theme from '../../../theme';
 import animations from '../../../animations';
@@ -56,6 +56,7 @@ export const Wrapper = styled.header`
         padding: 0.25rem 1rem;
         border-bottom: 2px solid ${theme.colors.primary};
         color: white;
+        background-color: ${theme.colors.font};
         background-image: url(${landingBackground});
         background-repeat: no-repeat;
         background-position: center top;

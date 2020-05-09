@@ -74,6 +74,6 @@ export default {
         animation: ${buttonAnimation} 0.4s 1.4s backwards;
     `,
     buttonShadow: css`
-        animation: ${buttonShadowAnimation} 0.2s 1.8s backwards;
+        animation: ${buttonShadowAnimation} 0.3s 1.9s backwards;
     `,
 };
