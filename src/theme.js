@@ -4,6 +4,7 @@ const theme = {
         background: '#FFFFFF',
         primary: '#F07178',
         primaryDarker: '#C35C61',
+        primaryOpaque: 'rgba(240,113,120, 0.8)',
         secondary: '#3F3D56',
         muted: '#0000007F',
         accent: '#e7e7e7',

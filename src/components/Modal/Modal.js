@@ -33,7 +33,7 @@ const CloseWrapper = styled.button.attrs(() => ({
     height: 100vh;
     z-index: -5;
     transition: opacity 0.2s;
-    background-color: ${`${theme.colors.primary}CC`};
+    background-color: ${theme.colors.primaryOpaque};
     opacity: ${(props) => (props.isOpen ? 1 : 0)};
     pointer-events: ${(props) => (props.isOpen ? 'auto' : 'none')};
     display: flex;
