@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl';
 import SEO from '../components/SEO/SEO';
 import App from '../App';
-import Landing from '../templates/Landing/Landing';
 import theme from '../theme';
 import LinkButton from '../components/LinkLikeButton/LinkButton';
+import LandingWrapper from '../components/LandingWrapper/LandingWrapper';
 
 const Wrapper = styled.div`
     position: absolute;
@@ -20,10 +20,10 @@ const Wrapper = styled.div`
     padding-bottom: 5px;
 `;
 
-const NotFound = styled.h2`
+const Header = styled.h2`
     text-align: center;
     font-size: ${theme.font.size.xxxl};
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 `;
 
 const Error404 = () => {
@@ -35,16 +35,16 @@ const Error404 = () => {
                 description={intl.formatMessage({ id: 'seo.description.index' })}
                 title={intl.formatMessage({ id: 'seo.title.404' })}
             />
-            <Landing>
+            <LandingWrapper>
                 <Wrapper>
-                    <NotFound>
+                    <Header>
                         <FormattedMessage id="seo.title.404" />
-                    </NotFound>
+                    </Header>
                     <LinkButton to="/">
                         <FormattedMessage id="404.backToMain" />
                     </LinkButton>
                 </Wrapper>
-            </Landing>
+            </LandingWrapper>
         </App>
     );
 };

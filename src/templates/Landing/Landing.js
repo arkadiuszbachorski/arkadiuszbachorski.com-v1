@@ -4,14 +4,15 @@ import Header from './Header/Header';
 import socialMedia from '../../assets/data/socialMedia';
 import SocialMediaIcon from '../../components/SocialIcon/SocialMediaIcon';
 import useStickyNavbar from '../../hooks/useStickyNavbar';
-import { MainWrapper, SocialMediaIconsWrapper } from './Landing.styled';
+import { SocialMediaIconsWrapper } from './Landing.styled';
+import LandingWrapper from '../../components/LandingWrapper/LandingWrapper';
 
 const Landing = ({ children, animate }) => {
     const landingRef = useRef(null);
     const headerState = useStickyNavbar(landingRef);
 
     return (
-        <MainWrapper ref={landingRef}>
+        <LandingWrapper ref={landingRef}>
             <Header headerState={headerState} animate={animate} />
             {children}
             <SocialMediaIconsWrapper animate={animate}>
@@ -21,7 +22,7 @@ const Landing = ({ children, animate }) => {
                     </SocialMediaIcon>
                 ))}
             </SocialMediaIconsWrapper>
-        </MainWrapper>
+        </LandingWrapper>
     );
 };
 

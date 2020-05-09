@@ -1,29 +1,24 @@
 {
-  "extends": [
-    "airbnb",
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "prettier",
-    "prettier/react"
-  ],
-  "parser": "babel-eslint",
-  "globals": {
-    "window": true,
-    "document": true,
-    "fetch": true,
-    "FormData": true,
-  },
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "paths": ["*./src"],
-        "extensions": [".js"]
-      }
+    "extends": ["airbnb", "eslint:recommended", "plugin:react/recommended", "prettier", "prettier/react"],
+    "parser": "babel-eslint",
+    "globals": {
+        "window": true,
+        "document": true,
+        "fetch": true,
+        "FormData": true
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": ["*./src"],
+                "extensions": [".js"]
+            }
+        }
+    },
+    "rules": {
+        "react/jsx-filename-extension": 0,
+        "react/require-default-props": 0,
+        "react/jsx-props-no-spreading": 0,
+        "import/prefer-default-export": 0
     }
-  },
-  "rules": {
-    "react/jsx-filename-extension": 0,
-    "react/require-default-props": 0,
-    "react/jsx-props-no-spreading": 0
-  }
 }
