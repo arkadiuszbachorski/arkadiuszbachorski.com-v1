@@ -6,14 +6,14 @@ import theme from '../../../theme';
 import animations from '../../../animations';
 
 const headerStickingAnimation = keyframes`
-from {
-opacity: 0;
-transform: translateY(-5rem);
-}
-to {
-opacity: 1;
-transform: translateY(0);
-}
+    from {
+      opacity: 0;
+      transform: translateY(-5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
 `;
 
 export const LogoWrapper = styled.h1`
@@ -42,9 +42,9 @@ export const LogoWrapper = styled.h1`
 export const Wrapper = styled.header`
     display: flex;
     flex-wrap: wrap;
-    transition: transform 1.3s, opacity 0.3s;
     opacity: 1;
     align-items: center;
+    transition: transform 0.3s, opacity 0.3s;
 
     &.is-stuck,
     &.is-animating {
@@ -71,7 +71,7 @@ export const Wrapper = styled.header`
         animation: ${headerStickingAnimation} 0.3s;
     }
 
-    &.is-animating {
+    &.is-top.is-animating {
         opacity: 0;
         transform: translateY(-5rem);
     }
