@@ -3,6 +3,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import landingBackground from '../../../assets/images/landing-background.jpg';
 import CloseButton from '../../../components/CloseButton/CloseButton';
 import theme from '../../../theme';
+import animations from '../../../animations';
 
 const headerStickingAnimation = keyframes`
 from {
@@ -19,6 +20,7 @@ export const LogoWrapper = styled.h1`
     margin: 0;
     display: block;
     max-width: 60vw;
+    ${(props) => (props.animate ? animations.ui : '')};
 
     svg {
         width: 100%;
@@ -103,6 +105,7 @@ export const MenuWrapper = styled.nav`
         top: 0;
         left: 0;
         align-items: center;
+        ${(props) => (props.animate ? animations.ui : '')};
     }
 `;
 
@@ -130,6 +133,7 @@ export const MenuButton = styled.button`
     width: 4rem;
     height: 4rem;
     padding: 0;
+    ${(props) => (props.animate ? animations.ui : '')}
 
     svg {
         transform: scale(1.4);

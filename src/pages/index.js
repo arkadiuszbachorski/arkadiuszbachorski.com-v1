@@ -19,7 +19,7 @@ const Index = () => {
                 description={intl.formatMessage({ id: 'seo.description.index' })}
                 title={intl.formatMessage({ id: 'seo.title.index' })}
             />
-            <Landing>
+            <Landing animate>
                 <Jumbotron />
             </Landing>
             <AboutMe />

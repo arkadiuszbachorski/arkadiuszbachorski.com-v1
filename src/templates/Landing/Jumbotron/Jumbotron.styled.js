@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import Button from '../../../components/Button/Button';
-import animationsDelay, { buttonShadowAnimation, buttonAnimation } from '../../../animationsDelay';
 import theme from '../../../theme';
+import animations from '../../../animations';
 
 export const Wrapper = styled.div`
     position: absolute;
     top: 35vh;
 `;
+
 export const Name = styled.h2`
     font-size: 1.2rem;
     display: block;
@@ -30,15 +31,35 @@ export const Name = styled.h2`
         font-size: 2vw;
     }
 `;
+
 export const StyledButton = styled(Button)`
-    animation: ${buttonAnimation} 0.2s ${animationsDelay.button}s backwards;
+    ${animations.button};
 
     &::after {
-        animation: ${buttonShadowAnimation} 0.3s ${animationsDelay.button + 0.2}s backwards;
+        ${animations.buttonShadow};
     }
 
     @media (${theme.mediaQuery.desktop}) {
         font-size: ${theme.font.size.l};
         padding: 1rem 2.5rem;
+    }
+`;
+
+export const Passion = styled.h2`
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 200;
+    line-height: 1.4;
+    ${animations.passion};
+
+    @media (min-width: 600px) {
+        font-size: 5vw;
+    }
+
+    @media (${theme.mediaQuery.desktop}) {
+        font-size: 4vw;
+        font-weight: 200;
     }
 `;

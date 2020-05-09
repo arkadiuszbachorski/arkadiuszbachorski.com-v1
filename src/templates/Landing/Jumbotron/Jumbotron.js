@@ -1,7 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'gatsby-plugin-intl';
-import Passion from './Passion/Passion';
-import { Name, StyledButton, Wrapper } from './Jumbotron.styled';
+import { Name, Passion, StyledButton, Wrapper } from './Jumbotron.styled';
 
 const Jumbotron = () => {
     return (
@@ -10,7 +9,9 @@ const Jumbotron = () => {
                 <FormattedMessage id="jumbotron.presentation" /> <br />
                 <span>Arkadiusz Bachorski</span>
             </Name>
-            <Passion />
+            <Passion>
+                <FormattedMessage id="jumbotron.passion" />
+            </Passion>
             <StyledButton
                 className="ui-animation"
                 onClick={() => {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import landingBackground from '../../assets/images/background.webp';
-import animationsDelay, { socialsAnimation } from '../../animationsDelay';
+import animations from '../../animations';
 import theme from '../../theme';
 
 export const MainWrapper = styled.div`
@@ -29,14 +29,15 @@ export const MainWrapper = styled.div`
         background-size: cover;
     }
 `;
+
 export const SocialMediaIconsWrapper = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
-    animation: ${socialsAnimation} 0.2s ${animationsDelay.socials}s backwards;
     position: absolute;
     bottom: 1rem;
     left: 0;
+    ${(props) => (props.animate ? animations.socials : '')}
 
     > *:hover {
         path {

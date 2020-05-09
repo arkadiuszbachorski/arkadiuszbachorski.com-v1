@@ -14,7 +14,7 @@ import {
     Wrapper,
 } from './Header.styled';
 
-const Header = ({ headerState }) => {
+const Header = ({ headerState, animate }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const closeMenu = () => setIsOpen(false);
@@ -30,10 +30,10 @@ const Header = ({ headerState }) => {
                 headerState.isAnimating ? 'is-animating' : ''
             }`}
         >
-            <LogoWrapper title="Arkadiusz Bachorski logo">
+            <LogoWrapper title="Arkadiusz Bachorski logo" animate={animate}>
                 <Logo />
             </LogoWrapper>
-            <MenuWrapper isOpen={isOpen}>
+            <MenuWrapper isOpen={isOpen} animate={animate}>
                 {['aboutMe', 'technologies', 'projects', 'contact'].map((section) => (
                     <MenuItem key={section} href={`#${section}`} onClick={closeMenu}>
                         <FormattedMessage id={`${section}.title`} />
@@ -42,7 +42,7 @@ const Header = ({ headerState }) => {
                 <StyledCloseButton onClick={closeMenu} />
             </MenuWrapper>
             <MenuOverlay isOpen={isOpen} onClick={closeMenu} />
-            <MenuButton onClick={openMenu}>
+            <MenuButton onClick={openMenu} animate={animate}>
                 <HamburgerIcon />
             </MenuButton>
         </Wrapper>
@@ -54,6 +54,7 @@ Header.propTypes = {
         isStuck: PropTypes.bool,
         isAnimating: PropTypes.bool,
     }),
+    animate: PropTypes.bool,
 };
 
 export default Header;
