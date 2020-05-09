@@ -128,4 +128,9 @@ export const ButtonWrapper = styled.nav`
 export const TagsWrapper = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content: center;
+
+    @media (${theme.mediaQuery.desktop}) {
+        justify-content: flex-start;
+    }
 `;
