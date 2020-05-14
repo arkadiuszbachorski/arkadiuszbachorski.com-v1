@@ -17,7 +17,7 @@ const Technologies = () => {
             <Description>
                 <FormattedMessage id="technologies.text" />
             </Description>
-            <UndrawWrapper />
+            <UndrawWrapper aria-hidden="true" />
             <ButtonWrapper>
                 <Button onClick={openModal}>
                     <FormattedMessage id="technologies.button" />

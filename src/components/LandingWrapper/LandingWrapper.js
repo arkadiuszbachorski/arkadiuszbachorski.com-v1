@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../theme';
+import theme from '../../styles/theme';
 import landingBackground from '../../assets/images/background.webp';
 
 const LandingWrapper = styled.div`

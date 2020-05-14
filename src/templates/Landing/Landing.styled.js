@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import animations from '../../animations';
-import theme from '../../theme';
+import animations from '../../styles/animations';
+import theme from '../../styles/theme';
 
 export const SocialMediaIconsWrapper = styled.div`
     display: flex;

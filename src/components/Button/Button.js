@@ -2,46 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import AnimatedShadowWrapper from '../ShadowWrapper/AnimatedShadowWrapper';
-import theme from '../../theme';
-
-export const buttonStyles = `
-    background-color: ${theme.colors.primary};
-    box-shadow: 5px 5px 0 ${theme.colors.primaryDarker};
-    color: ${theme.colors.font};
-    border: none;
-    padding: 0.75rem 2rem;
-    cursor: pointer;
-    text-decoration: none;
-    margin-left: 5px;
-
-    &:disabled {
-        cursor: default;
-        background-color: ${theme.colors.accent};
-
-        &::after {
-            opacity: 0.4;
-        }
-    }
-`;
+import { buttonStylesWithoutShadow } from '../../styles/button';
 
 const Btn = styled(AnimatedShadowWrapper)`
-    background-color: ${theme.colors.primary};
-    color: ${theme.colors.font};
-    border: none;
+    ${buttonStylesWithoutShadow};
     box-shadow: none;
-    padding: 0.75rem 2rem;
-    cursor: pointer;
-    text-decoration: none;
-    margin-left: 5px;
-
-    &:disabled {
-        cursor: default;
-        background-color: ${theme.colors.accent};
-
-        &::after {
-            opacity: 0.4;
-        }
-    }
 `;
 
 const Button = ({ children, className, onClick, href, target, type, disabled }) => {

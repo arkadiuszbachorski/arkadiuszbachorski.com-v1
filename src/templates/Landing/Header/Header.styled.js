@@ -2,8 +2,8 @@ import styled, { keyframes } from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import landingBackground from '../../../assets/images/background.webp';
 import CloseButton from '../../../components/CloseButton/CloseButton';
-import theme from '../../../theme';
-import animations from '../../../animations';
+import theme from '../../../styles/theme';
+import animations from '../../../styles/animations';
 
 const headerStickingAnimation = keyframes`
     from {
@@ -144,12 +144,19 @@ export const MenuButton = styled.button`
         color: ${theme.colors.background};
     }
 
+    &:focus {
+        outline: 1px dotted red;
+    }
+
     @media (${theme.mediaQuery.desktop}) {
         display: none;
     }
 `;
 
-export const MenuOverlay = styled.button`
+export const MenuOverlay = styled.button.attrs(() => ({
+    tabIndex: '-1',
+    'aria-hidden': 'true',
+}))`
     position: fixed;
     left: 0;
     top: 0;

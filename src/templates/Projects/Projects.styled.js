@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import SectionWrapper from '../../components/SectionWrapper/SectionWrapper';
 import ProjectFrameSVG from '../../assets/images/undraw/project-frame.inline.svg';
-import theme from '../../theme';
+import theme from '../../styles/theme';
 
 export const MainWrapper = styled(SectionWrapper)`
     display: flex;

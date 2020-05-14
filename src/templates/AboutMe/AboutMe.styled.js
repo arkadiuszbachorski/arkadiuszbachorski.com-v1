@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import SectionWrapper from '../../components/SectionWrapper/SectionWrapper';
-import Profile from '../../assets/images/undraw/profile.inline.svg';
-import theme from '../../theme';
+import profileDrawing from '../../assets/images/undraw/profile.svg';
+import theme from '../../styles/theme';
+import { shadowBorder } from '../../styles/shadowBorder';
 
 export const MainWrapper = styled(SectionWrapper)`
     max-width: 1200px;
@@ -43,13 +44,16 @@ export const GridWrapper = styled.div`
     }
 `;
 
-export const ProfileDrawing = styled(Profile)`
+export const ProfileDrawing = styled.div`
     grid-area: profile;
     display: none;
 
     @media (${theme.mediaQuery.desktop}) {
         display: block;
         width: 220px;
+        background-image: url(${profileDrawing});
+        background-repeat: no-repeat;
+        background-size: contain;
         height: 150px;
         align-self: start;
     }
@@ -63,7 +67,7 @@ export const FirstText = styled(Text)`
     grid-area: text1;
 
     @media (${theme.mediaQuery.tablet}) {
-        margin-left: 2rem;
+        margin-left: 1rem;
         margin-top: 0;
     }
 `;
@@ -77,10 +81,10 @@ export const Image = styled(Img)`
     grid-area: photo;
     width: 170px;
     height: 222px;
-    border: 2px solid ${theme.colors.font};
     box-shadow: 10px 10px 0 ${theme.colors.primary};
     margin-right: 10px;
     margin-bottom: 10px;
+    ${shadowBorder};
 
     @media (${theme.mediaQuery.tablet}) {
         justify-self: left;

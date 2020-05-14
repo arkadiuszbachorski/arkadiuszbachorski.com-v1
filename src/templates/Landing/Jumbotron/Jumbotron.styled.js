@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Button from '../../../components/Button/Button';
-import theme from '../../../theme';
-import animations from '../../../animations';
+import theme from '../../../styles/theme';
+import animations from '../../../styles/animations';
 
 export const Wrapper = styled.div`
     position: absolute;

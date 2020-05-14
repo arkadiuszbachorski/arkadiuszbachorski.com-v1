@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import theme from '../../theme';
+import theme from '../../styles/theme';
 
 const bounce = keyframes`
     0%   { transform: scale(1,1)    translateY(0); }

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl';
 import SEO from '../components/SEO/SEO';
 import App from '../App';
-import theme from '../theme';
+import theme from '../styles/theme';
 import LinkButton from '../components/LinkLikeButton/LinkButton';
 import LandingWrapper from '../components/LandingWrapper/LandingWrapper';
 

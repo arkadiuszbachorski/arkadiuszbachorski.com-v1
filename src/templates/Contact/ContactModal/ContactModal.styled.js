@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Modal from '../../../components/Modal/Modal';
 import mailSent from '../../../assets/images/undraw/mail-sent.svg';
 import mailSentFailure from '../../../assets/images/undraw/mail-sent-failure.svg';
-import theme from '../../../theme';
+import theme from '../../../styles/theme';
 
 export const StyledModal = styled(Modal)`
     margin: 1rem;

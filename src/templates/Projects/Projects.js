@@ -29,7 +29,7 @@ const Projects = () => {
                     <ProjectWrapper key={project.id}>
                         <ImageWrapper>
                             <Image alt={`${project.name} project image`} fluid={project.image.fluid} />
-                            <ProjectFrame />
+                            <ProjectFrame aria-hidden="true" />
                         </ImageWrapper>
                         <DescriptionWrapper>
                             <Name>{project.name}</Name>

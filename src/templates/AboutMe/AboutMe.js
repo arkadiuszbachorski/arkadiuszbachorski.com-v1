@@ -23,7 +23,7 @@ const AboutMe = () => {
                 <FormattedMessage id="aboutMe.title" />
             </SectionTitle>
             <GridWrapper>
-                <ProfileDrawing />
+                <ProfileDrawing aria-hidden="true" />
                 <FirstText>
                     <FormattedMessage id="aboutMe.text1" />
                 </FirstText>

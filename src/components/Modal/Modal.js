@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { useIntl } from 'gatsby-plugin-intl';
 import CloseButton from '../CloseButton/CloseButton';
 import useKeyboardKey from '../../hooks/useKeyboardKey';
-import theme from '../../theme';
+import theme from '../../styles/theme';
+import { shadowBorder } from '../../styles/shadowBorder';
 
 const Wrapper = styled.div.attrs((props) => ({
     ariaHidden: !props.isOpen ? 'true' : undefined,
@@ -24,7 +26,6 @@ const Wrapper = styled.div.attrs((props) => ({
 
 const CloseWrapper = styled.button.attrs(() => ({
     tabIndex: '-1',
-    ariaHidden: 'true',
 }))`
     position: absolute;
     left: 0;
@@ -48,7 +49,7 @@ const Content = styled.div`
     padding: 2rem;
     max-width: 90vw;
     max-height: 90vh;
-    border: 2px solid ${theme.colors.font};
+    ${shadowBorder};
     box-shadow: 5px 5px 0 ${theme.colors.primary};
     overflow-y: auto;
 `;
@@ -57,6 +58,8 @@ const classIdentifier = 'modal-closing-background';
 
 const Modal = ({ isOpen, closeModal, children, className }) => {
     useKeyboardKey('Escape', closeModal);
+
+    const intl = useIntl();
 
     return (
         <Wrapper isOpen={isOpen}>
@@ -68,6 +71,7 @@ const Modal = ({ isOpen, closeModal, children, className }) => {
                     }
                 }}
                 className={classIdentifier}
+                aria-label={intl.formatMessage({ id: 'close' })}
             />
             <Content className={className}>
                 <CloseButton focusable={isOpen} onClick={closeModal} />

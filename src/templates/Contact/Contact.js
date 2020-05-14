@@ -3,10 +3,9 @@ import { FormattedMessage, useIntl } from 'gatsby-plugin-intl';
 import { Formik } from 'formik';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
-import Button from '../../components/Button/Button';
 import ContactModal from './ContactModal/ContactModal';
 import Loading from '../../components/Loading/Loading';
-import { MainWrapper, Description, ErrorMessage, Form, Input } from './Contact.styled';
+import { MainWrapper, Description, ErrorMessage, Form, Input, Label, StyledButton } from './Contact.styled';
 
 const Contact = () => {
     const intl = useIntl();
@@ -85,28 +84,24 @@ const Contact = () => {
             >
                 {({ isSubmitting }) => (
                     <Form>
-                        <Input
-                            type="email"
-                            name="email"
-                            placeholder={intl.formatMessage({ id: 'contact.form.placeholder.email' })}
-                        />
+                        <Label htmlFor="email">
+                            <FormattedMessage id="contact.form.placeholder.email" />
+                        </Label>
+                        <Input id="email" type="email" name="email" />
                         <ErrorMessage name="email" component="div" />
-                        <Input
-                            type="subject"
-                            name="subject"
-                            placeholder={intl.formatMessage({ id: 'contact.form.placeholder.subject' })}
-                        />
+                        <Label htmlFor="subject">
+                            <FormattedMessage id="contact.form.placeholder.subject" />
+                        </Label>
+                        <Input id="subject" type="subject" name="subject" />
                         <ErrorMessage name="subject" component="div" />
-                        <Input
-                            component="textarea"
-                            name="message"
-                            placeholder={intl.formatMessage({ id: 'contact.form.placeholder.message' })}
-                            rows="8"
-                        />
+                        <Label htmlFor="message">
+                            <FormattedMessage id="contact.form.placeholder.message" />
+                        </Label>
+                        <Input id="message" component="textarea" name="message" rows="10" />
                         <ErrorMessage name="message" component="div" />
-                        <Button type="submit" disabled={isSubmitting}>
+                        <StyledButton type="submit" disabled={isSubmitting}>
                             {isSubmitting ? <Loading /> : <FormattedMessage id="contact.form.button" />}
-                        </Button>
+                        </StyledButton>
                     </Form>
                 )}
             </Formik>

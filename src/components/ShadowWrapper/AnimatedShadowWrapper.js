@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../theme';
+import theme from '../../styles/theme';
 
 const AnimatedShadowWrapper = styled.div`
     box-shadow: inset 0 0 0 2px ${theme.colors.font};

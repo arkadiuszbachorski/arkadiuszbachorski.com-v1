@@ -1,16 +1,15 @@
 import styled from 'styled-components';
-import theme from '../../theme';
+import theme from '../../styles/theme';
 
 const SectionTitle = styled.h2`
     width: 100%;
     text-align: center;
-    font-weight: 400;
     margin-bottom: 2rem;
     font-size: ${theme.font.size.xl};
     position: relative;
 
     @media (${theme.mediaQuery.tablet}) {
-        margin-bottom: 3.5rem;
+        margin-bottom: 4rem;
     }
 
     &::after {

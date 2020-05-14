@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import theme from '../../theme';
+import theme from '../../styles/theme';
 
 export const FooterContainer = styled.footer`
     display: flex;

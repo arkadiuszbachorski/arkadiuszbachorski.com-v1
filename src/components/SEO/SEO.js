@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import { useIntl } from 'gatsby-plugin-intl';
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, meta, title, children }) {
     const { site } = useStaticQuery(
         graphql`
             query {
@@ -18,12 +19,14 @@ function SEO({ description, lang, meta, title }) {
         `,
     );
 
+    const { locale } = useIntl();
+
     const metaDescription = description || site.siteMetadata.description;
 
     return (
         <Helmet
             htmlAttributes={{
-                lang,
+                lang: locale,
             }}
             title={title || site.siteMetadata.title}
             titleTemplate="Arkadiusz Bachorski | %s"
@@ -62,7 +65,9 @@ function SEO({ description, lang, meta, title }) {
                 },
                 ...meta,
             ]}
-        />
+        >
+            {children}
+        </Helmet>
     );
 }
 
@@ -78,6 +83,7 @@ SEO.propTypes = {
     lang: PropTypes.string,
     meta: PropTypes.arrayOf(PropTypes.object),
     title: PropTypes.string,
+    children: PropTypes.node,
 };
 
 export default SEO;

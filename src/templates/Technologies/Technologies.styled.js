@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import SectionWrapper from '../../components/SectionWrapper/SectionWrapper';
 import reactUndraw from '../../assets/images/undraw/react.svg';
-import theme from '../../theme';
+import theme from '../../styles/theme';
 
 export const MainWrapper = styled(SectionWrapper)`
     display: flex;

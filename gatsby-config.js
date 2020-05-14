@@ -16,10 +16,10 @@ module.exports = {
             resolve: `gatsby-plugin-google-fonts`,
             options: {
                 fonts: [
-                    `poppins\:200,400` // you can also specify font weights and styles
+                    `poppins\:200,400,500`, // you can also specify font weights and styles
                 ],
-                display: 'swap'
-            }
+                display: 'swap',
+            },
         },
         {
             resolve: `gatsby-plugin-manifest`,

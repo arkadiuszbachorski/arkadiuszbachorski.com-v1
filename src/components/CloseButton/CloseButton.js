@@ -3,14 +3,13 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useIntl } from 'gatsby-plugin-intl';
 import CloseIcon from '../../assets/images/icons/close.inline.svg';
-import theme from '../../theme';
+import theme from '../../styles/theme';
 
 const Close = styled.button.attrs((props) => ({
     tabIndex: !props.focusable ? '-1' : undefined,
-    ariaHidden: !props.focusable ? 'true' : undefined,
 }))`
     position: absolute;
-    top: 0;
+    top: 0.5rem;
     right: 0.5rem;
     width: 3rem;
     height: 3rem;
@@ -29,7 +28,7 @@ const CloseButton = ({ title, ...restProps }) => {
     const parsedTitle = title || intl.formatMessage({ id: 'close' });
     return (
         <Close {...restProps} title={parsedTitle} aria-label={parsedTitle}>
-            <CloseIcon />
+            <CloseIcon aria-hidden="true" />
         </Close>
     );
 };

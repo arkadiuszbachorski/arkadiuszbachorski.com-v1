@@ -31,7 +31,8 @@ const Header = ({ headerState, animate }) => {
             }`}
         >
             <LogoWrapper title="Arkadiusz Bachorski logo" animate={animate}>
-                <Logo />
+                <span className="sr-only">Arkadiusz Bachorski</span>
+                <Logo aria-hidden="true" />
             </LogoWrapper>
             <MenuWrapper isOpen={isOpen} animate={animate}>
                 {['aboutMe', 'technologies', 'projects', 'contact'].map((section) => (
@@ -39,11 +40,14 @@ const Header = ({ headerState, animate }) => {
                         <FormattedMessage id={`${section}.title`} />
                     </MenuItem>
                 ))}
-                <StyledCloseButton onClick={closeMenu} />
+                <StyledCloseButton focusable={isOpen} onClick={closeMenu} />
             </MenuWrapper>
             <MenuOverlay isOpen={isOpen} onClick={closeMenu} />
             <MenuButton onClick={openMenu} animate={animate}>
-                <HamburgerIcon />
+                <HamburgerIcon aria-hidden="true" />
+                <span className="sr-only">
+                    <FormattedMessage id="close" />
+                </span>
             </MenuButton>
         </Wrapper>
     );
