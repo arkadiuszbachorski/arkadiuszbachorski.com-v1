@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import theme from '../../styles/theme';
 
 export const FooterContainer = styled.footer`
@@ -29,15 +28,4 @@ export const Text = styled.span`
     span {
         color: ${theme.colors.primary};
     }
-`;
-
-export const LanguageSwitcherWrapper = styled.div`
-    display: flex;
-    margin: 2rem 0;
-`;
-
-export const LanguageLink = styled(Link)`
-    margin: 0 0.5rem;
-    padding: 1rem;
-    color: ${theme.colors.primary};
 `;

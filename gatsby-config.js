@@ -2,12 +2,15 @@ require('dotenv').config({
     path: `.env`,
 });
 
+const languages = ['en', 'pl'];
+
 module.exports = {
     siteMetadata: {
         siteUrl: 'https://arkadiuszbachorski.com',
         title: `Arkadiusz Bachorski | Fullstack Web Developer`,
         description: ``,
         author: `Arkadiusz Bachorski`,
+        languages,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -39,7 +42,7 @@ module.exports = {
             resolve: `gatsby-plugin-intl`,
             options: {
                 path: `${__dirname}/src/assets/intl`,
-                languages: [`en`, `pl`],
+                languages: languages,
                 defaultLanguage: `en`,
                 redirect: false,
             },

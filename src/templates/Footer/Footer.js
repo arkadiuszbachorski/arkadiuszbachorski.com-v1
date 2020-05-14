@@ -1,7 +1,8 @@
 import React from 'react';
 import SocialMediaIcon from '../../components/SocialIcon/SocialMediaIcon';
 import socialMedia from '../../assets/data/socialMedia';
-import { FooterContainer, IconsContainer, LanguageLink, LanguageSwitcherWrapper, Text } from './Footer.styled';
+import { FooterContainer, IconsContainer, Text } from './Footer.styled';
+import LanguageSwitcher from './LanguageSwitcher/LanguageSwitcher';
 
 const Footer = () => (
     <FooterContainer>
@@ -12,13 +13,7 @@ const Footer = () => (
                 </SocialMediaIcon>
             ))}
         </IconsContainer>
-        <LanguageSwitcherWrapper>
-            {['pl', 'en'].map((language) => (
-                <LanguageLink key={language} to={`/${language}`}>
-                    {language.toUpperCase()}
-                </LanguageLink>
-            ))}
-        </LanguageSwitcherWrapper>
+        <LanguageSwitcher />
         <Text>
             Arkadiusz Bachorski <span>&copy; 2020</span>
         </Text>
