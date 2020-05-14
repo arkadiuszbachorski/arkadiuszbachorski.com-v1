@@ -3,6 +3,22 @@ import { useIntl } from 'gatsby-plugin-intl';
 
 const data = [
     {
+        id: 'arkadiuszbachorski',
+        name: 'arkadiuszbachorski.com',
+        tags: {
+            pl: ['Gatsby'],
+            en: ['Gatsby'],
+        },
+        description: {
+            pl: 'Moja strona personalna i portfolio. Właśnie ją przeglądasz!',
+            en: 'My personal page and portfolio. You are just browsing it!',
+        },
+        urls: {
+            visit: null,
+            repository: 'https://github.com/arkadiuszbachorski/arkadiuszbachorski.com',
+        },
+    },
+    {
         id: 'zhonya',
         name: 'Zhonya',
         tags: {
@@ -24,8 +40,8 @@ const data = [
         id: 'xmake',
         name: 'Xmake',
         tags: {
-            pl: ['Biblioteka', 'Laravel'],
-            en: ['Library', 'Laravel'],
+            pl: ['Biblioteka', 'Laravel', 'Open source'],
+            en: ['Library', 'Laravel', 'Open source'],
         },
         description: {
             pl:
