@@ -13,9 +13,13 @@ import {
     StyledCloseButton,
     Wrapper,
 } from './Header.styled';
+import useMatchMedia from '../../../hooks/useMatchMedia';
+import theme from '../../../styles/theme';
 
 const Header = ({ headerState, animate }) => {
     const [isOpen, setIsOpen] = useState(false);
+
+    const isDesktop = useMatchMedia(`(${theme.mediaQuery.desktop})`);
 
     const closeMenu = () => setIsOpen(false);
     const openMenu = () => setIsOpen(true);
@@ -34,21 +38,21 @@ const Header = ({ headerState, animate }) => {
                 <span className="sr-only">Arkadiusz Bachorski</span>
                 <Logo aria-hidden="true" />
             </LogoWrapper>
-            <MenuWrapper isOpen={isOpen} animate={animate}>
-                {['aboutMe', 'technologies', 'projects', 'contact'].map((section) => (
-                    <MenuItem key={section} href={`#${section}`} onClick={closeMenu}>
-                        <FormattedMessage id={`${section}.title`} />
-                    </MenuItem>
-                ))}
-                <StyledCloseButton focusable={isOpen} onClick={closeMenu} />
-            </MenuWrapper>
-            <MenuOverlay isOpen={isOpen} onClick={closeMenu} />
             <MenuButton onClick={openMenu} animate={animate}>
                 <HamburgerIcon aria-hidden="true" />
                 <span className="sr-only">
                     <FormattedMessage id="close" />
                 </span>
             </MenuButton>
+            <MenuWrapper isOpen={isOpen} animate={animate}>
+                {['aboutMe', 'technologies', 'projects', 'contact'].map((section) => (
+                    <MenuItem isFocusable={isOpen || isDesktop} key={section} href={`#${section}`} onClick={closeMenu}>
+                        <FormattedMessage id={`${section}.title`} />
+                    </MenuItem>
+                ))}
+                <StyledCloseButton focusable={isOpen} onClick={closeMenu} />
+            </MenuWrapper>
+            <MenuOverlay isOpen={isOpen} onClick={closeMenu} />
         </Wrapper>
     );
 };

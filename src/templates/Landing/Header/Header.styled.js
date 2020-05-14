@@ -110,7 +110,9 @@ export const MenuWrapper = styled.nav`
     }
 `;
 
-export const MenuItem = styled(AnchorLink)`
+export const MenuItem = styled(AnchorLink).attrs((props) => ({
+    tabIndex: !props.isFocusable ? '-1' : undefined,
+}))`
     margin: 2rem;
     font-size: ${theme.font.size.l};
     color: ${theme.colors.font};
