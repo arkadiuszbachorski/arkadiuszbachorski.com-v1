@@ -4,6 +4,7 @@ require('dotenv').config({
 
 module.exports = {
     siteMetadata: {
+        siteUrl: 'https://arkadiuszbachorski.com',
         title: `Arkadiusz Bachorski | Fullstack Web Developer`,
         description: ``,
         author: `Arkadiusz Bachorski`,
@@ -12,6 +13,7 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
+        'gatsby-plugin-sitemap',
         {
             resolve: `gatsby-plugin-google-fonts`,
             options: {
@@ -39,7 +41,7 @@ module.exports = {
                 path: `${__dirname}/src/assets/intl`,
                 languages: [`en`, `pl`],
                 defaultLanguage: `en`,
-                redirect: true,
+                redirect: false,
             },
         },
         {
