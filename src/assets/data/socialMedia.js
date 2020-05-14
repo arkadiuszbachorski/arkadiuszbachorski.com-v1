@@ -19,6 +19,6 @@ export default [
         id: 'ig',
         name: 'Instagram',
         icon: InstagramIcon,
-        url: 'https://www.instagram.com/',
+        url: 'https://www.instagram.com/arkadiusz_bachorski/',
     },
 ];
