@@ -54,7 +54,7 @@ const Contact = () => {
                             formData.append(key, value);
                         });
                         formData.append('token', token);
-                        const response = await fetch('http://arkadiuszbachorskimail.hekko24.pl/', {
+                        const response = await fetch('https://arkadiuszbachorskimail.hekko24.pl/', {
                             method: 'POST',
                             body: formData,
                             headers: {
