@@ -44,7 +44,7 @@ module.exports = {
                 path: `${__dirname}/src/assets/intl`,
                 languages: languages,
                 defaultLanguage: `en`,
-                redirect: false,
+                redirect: true,
             },
         },
         {

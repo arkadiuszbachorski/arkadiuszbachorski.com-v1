@@ -5,7 +5,16 @@ const data = [
     {
         id: 'zhonya',
         name: 'Zhonya',
-        tags: ['pwa', 'react', 'laravel'],
+        tags: {
+            pl: ['PWA', 'React', 'Laravel'],
+            en: ['PWA', 'React', 'Laravel'],
+        },
+        description: {
+            pl:
+                'Aplikacja zapewniająca użytkownikowi możliwość łatwego mierzenia czasu, który poświęca na wybraną czynność. Usprawnia skrupulatne zarządzanie czasem.',
+            en:
+                'Zhonya is an application that allows users to easily measure time which they spend on specific activity to improve their time management possibilities.',
+        },
         urls: {
             visit: 'https://www.zhonya.hekko24.pl',
             repository: null,
@@ -14,7 +23,16 @@ const data = [
     {
         id: 'xmake',
         name: 'Xmake',
-        tags: ['library', 'laravel'],
+        tags: {
+            pl: ['Biblioteka', 'Laravel'],
+            en: ['Library', 'Laravel'],
+        },
+        description: {
+            pl:
+                'Komenda Laravel Artisan xmake przyspieszająca proces tworzenia aplikacji poprzez generowanie podobnych zasobów z poziomu CLI.',
+            en:
+                'Additional Laravel Artisan xmake command for faster resource creating and scaffolding. Created to speed up developing process.',
+        },
         urls: {
             visit: null,
             repository: 'https://github.com/arkadiuszbachorski/laravel-xmake',
@@ -44,10 +62,11 @@ const useProjectImages = () => {
 
 const useProjectsData = () => {
     const images = useProjectImages();
-    const intl = useIntl();
+    const { locale } = useIntl();
     return data.map((project) => ({
         ...project,
-        description: intl.formatMessage({ id: `projects.${project.id}.description` }),
+        description: project.description[locale],
+        tags: project.tags[locale],
         image: images.find((image) => image.fluid.src.includes(project.id)),
     }));
 };

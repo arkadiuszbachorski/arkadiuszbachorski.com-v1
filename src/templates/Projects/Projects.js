@@ -35,9 +35,7 @@ const Projects = () => {
                             <Name>{project.name}</Name>
                             <TagsWrapper>
                                 {project.tags.map((tag) => (
-                                    <Badge key={tag}>
-                                        <FormattedMessage id={`projects.tags.${tag}`} />
-                                    </Badge>
+                                    <Badge key={tag}>{tag}</Badge>
                                 ))}
                             </TagsWrapper>
                             <Description>{project.description}</Description>
