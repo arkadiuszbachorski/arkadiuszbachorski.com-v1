@@ -6,7 +6,7 @@ const theme = {
         primaryDarker: '#C35C61',
         primaryOpaque: 'rgba(240,113,120, 0.8)',
         secondary: '#3F3D56',
-        muted: '#0000007F',
+        muted: '#666666',
         accent: '#e7e7e7',
     },
     font: {

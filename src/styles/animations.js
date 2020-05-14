@@ -12,7 +12,7 @@ const socialsAnimation = keyframes`
 `;
 
 const uiAnimation = keyframes`
-from {
+    from {
       opacity: 0;
       transform: translateY(-4rem);
     }
