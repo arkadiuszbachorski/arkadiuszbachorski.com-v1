@@ -2,15 +2,12 @@ require('dotenv').config({
     path: `.env`,
 });
 
-const languages = ['en', 'pl'];
-
 module.exports = {
     siteMetadata: {
         siteUrl: 'https://arkadiuszbachorski.com',
         title: `Arkadiusz Bachorski | Fullstack Web Developer`,
         description: ``,
         author: `Arkadiusz Bachorski`,
-        languages,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -39,12 +36,12 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-intl`,
+            resolve: `gatsby-plugin-intl-contentful`,
             options: {
-                path: `${__dirname}/src/assets/intl`,
-                languages: languages,
                 defaultLanguage: `en`,
                 redirect: true,
+                contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
+                contentfulAccessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
             },
         },
         {
@@ -74,5 +71,13 @@ module.exports = {
                 https: true,
             },
         },
+        {
+            resolve: `gatsby-source-contentful`,
+            options: {
+                spaceId: process.env.CONTENTFUL_SPACE_ID,
+                accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+            },
+        },
+        `gatsby-transformer-inline-svg`
     ],
 };
