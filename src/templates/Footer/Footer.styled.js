@@ -18,7 +18,15 @@ export const IconsContainer = styled.div`
     width: 100%;
     padding: 0 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
+    > *:not(:last-child) {
+        margin-right: 4rem;
+    }
+
+    svg path {
+        fill: ${theme.colors.font};
+    }
 `;
 
 export const Text = styled.span`
