@@ -1,6 +1,4 @@
 import React from 'react';
-import { FormattedMessage } from 'gatsby-plugin-intl';
-import technologies from '../../../assets/data/technologies';
 import Modal from '../../../components/Modal/Modal';
 import {
     TechnologiesWrapper,
@@ -9,19 +7,20 @@ import {
     TechnologyGroupTitle,
     TechnologyGroupWrapper,
 } from './TechnologiesModal.styled';
+import useTechnologyGroupData from '../../../assets/data/useTechnologyGroupData';
 
 const TechnologiesModal = ({ isOpen, closeModal }) => {
+    const technologyGroups = useTechnologyGroupData();
+
     return (
         <Modal isOpen={isOpen} closeModal={closeModal}>
             <TechnologiesWrapper>
-                {Object.entries(technologies).map(([key, list]) => (
-                    <TechnologyGroupWrapper key={key}>
-                        <TechnologyGroupTitle>
-                            <FormattedMessage id={`technologies.group.${key}`} />
-                        </TechnologyGroupTitle>
+                {technologyGroups.map((technologyGroup) => (
+                    <TechnologyGroupWrapper key={technologyGroup.id}>
+                        <TechnologyGroupTitle>{technologyGroup.name}</TechnologyGroupTitle>
                         <TechnologyGroupList>
-                            {list.map((item) => (
-                                <TechnologyGroupListItem key={item}>{item}</TechnologyGroupListItem>
+                            {technologyGroup.technologies?.map((technology) => (
+                                <TechnologyGroupListItem key={technology.id}>{technology.name}</TechnologyGroupListItem>
                             ))}
                         </TechnologyGroupList>
                     </TechnologyGroupWrapper>
