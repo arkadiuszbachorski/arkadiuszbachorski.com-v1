@@ -1,7 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'gatsby-plugin-intl';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
-import useProjectsData from '../../assets/data/projects';
 import Button from '../../components/Button/Button';
 import {
     ButtonWrapper,
@@ -16,6 +15,7 @@ import {
     TagsWrapper,
 } from './Projects.styled';
 import Badge from '../../components/Badge/Badge';
+import useProjectsData from '../../assets/data/useProjectsData';
 
 const Projects = () => {
     const projects = useProjectsData();
@@ -34,22 +34,17 @@ const Projects = () => {
                         <DescriptionWrapper>
                             <Name>{project.name}</Name>
                             <TagsWrapper>
-                                {project.tags.map((tag) => (
-                                    <Badge key={tag}>{tag}</Badge>
+                                {project.technologies.map((technology) => (
+                                    <Badge key={technology.id}>{technology.name}</Badge>
                                 ))}
                             </TagsWrapper>
                             <Description>{project.description}</Description>
                             <ButtonWrapper>
-                                {project.urls.visit && (
-                                    <Button href={project.urls.visit} target="_blank">
-                                        <FormattedMessage id="projects.button.visit" />
+                                {project.urls.map((url) => (
+                                    <Button href={url.url} target="_blank">
+                                        {url.name}
                                     </Button>
-                                )}
-                                {project.urls.repository && (
-                                    <Button href={project.urls.repository} target="_blank">
-                                        <FormattedMessage id="projects.button.repository" />
-                                    </Button>
-                                )}
+                                ))}
                             </ButtonWrapper>
                         </DescriptionWrapper>
                     </ProjectWrapper>
