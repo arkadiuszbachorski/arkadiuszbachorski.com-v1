@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import localiseData from '../../utils/localiseData';
-import { useIntl } from 'gatsby-plugin-intl';
+import { useIntl } from 'gatsby-plugin-intl-contentful';
 
 const useProjectsData = () => {
     const { locale } = useIntl();

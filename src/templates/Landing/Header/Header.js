@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'gatsby-plugin-intl';
+import { FormattedMessage } from 'gatsby-plugin-intl-contentful';
 import Logo from '../../../assets/images/logo.inline.svg';
 import HamburgerIcon from '../../../assets/images/icons/hamburger.inline.svg';
 import useKeyboardKey from '../../../hooks/useKeyboardKey';

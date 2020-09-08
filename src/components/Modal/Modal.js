@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { useIntl } from 'gatsby-plugin-intl';
+import { useIntl } from 'gatsby-plugin-intl-contentful';
 import CloseButton from '../CloseButton/CloseButton';
 import useKeyboardKey from '../../hooks/useKeyboardKey';
 import theme from '../../styles/theme';

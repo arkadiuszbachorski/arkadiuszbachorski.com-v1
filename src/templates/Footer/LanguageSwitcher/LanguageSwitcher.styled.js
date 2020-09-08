@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link as GatsbyLink } from 'gatsby-plugin-intl';
+import { Link as GatsbyLink } from 'gatsby-plugin-intl-contentful';
 import theme from '../../../styles/theme';
 
 export const Wrapper = styled.div`

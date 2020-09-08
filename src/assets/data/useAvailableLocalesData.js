@@ -1,6 +1,4 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import localiseData from '../../utils/localiseData';
-import { useIntl } from 'gatsby-plugin-intl';
 
 const useAvailableLocalesData = () => {
     const data = useStaticQuery(graphql`

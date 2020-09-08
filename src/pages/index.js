@@ -1,5 +1,5 @@
 import React from 'react';
-import { useIntl } from 'gatsby-plugin-intl';
+import { useIntl } from 'gatsby-plugin-intl-contentful';
 import SEO from '../components/SEO/SEO';
 import App from '../App';
 import Footer from '../templates/Footer/Footer';

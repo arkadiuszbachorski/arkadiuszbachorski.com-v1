@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'gatsby-plugin-intl';
+import { FormattedMessage } from 'gatsby-plugin-intl-contentful';
 import { graphql, useStaticQuery } from 'gatsby';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import { FirstText, GridWrapper, Image, MainWrapper, ProfileDrawing, SecondText } from './AboutMe.styled';

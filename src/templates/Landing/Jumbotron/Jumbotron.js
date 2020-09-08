@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'gatsby-plugin-intl';
+import { FormattedMessage } from 'gatsby-plugin-intl-contentful';
 import { Name, Passion, StyledButton, Wrapper } from './Jumbotron.styled';
 
 const Jumbotron = () => {

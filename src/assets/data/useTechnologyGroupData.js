@@ -1,4 +1,4 @@
-import { useIntl } from 'gatsby-plugin-intl';
+import { useIntl } from 'gatsby-plugin-intl-contentful';
 import { graphql, useStaticQuery } from 'gatsby';
 import localiseData from '../../utils/localiseData';
 

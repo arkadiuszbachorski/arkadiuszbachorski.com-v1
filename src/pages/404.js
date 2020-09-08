@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useIntl, FormattedMessage } from 'gatsby-plugin-intl';
+import { useIntl, FormattedMessage } from 'gatsby-plugin-intl-contentful';
 import SEO from '../components/SEO/SEO';
 import App from '../App';
 import theme from '../styles/theme';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FormattedMessage, useIntl } from 'gatsby-plugin-intl';
+import { FormattedMessage, useIntl } from 'gatsby-plugin-intl-contentful';
 import { Formik } from 'formik';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FormattedMessage } from 'gatsby-plugin-intl';
+import { FormattedMessage } from 'gatsby-plugin-intl-contentful';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import Button from '../../components/Button/Button';
 import TechnologiesModal from './TechnologiesModal/TechnologiesModal';
